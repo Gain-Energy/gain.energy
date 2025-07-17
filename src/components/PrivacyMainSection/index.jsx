@@ -1,6 +1,6 @@
-import FirstGradient from '../Gradients/FirstGradient';
-import SecondGradient from '../Gradients/SecondGradient';
-import * as S from './style'; function PrivacyMainSection() {
+import * as S from './style'; 
+
+function PrivacyMainSection() {
 	return (
 		<S.Provider>
 			<S.Container>

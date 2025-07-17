@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+import Shadow from "../Shadow/Shadow";
 import * as S from './style';
 
 import pathItems from '../../data/pathItems';
@@ -121,19 +122,22 @@ function DrillingEngineeringSection() {
 
     return (
         <S.DrillingEngineeringSection>
+            <Shadow/>
             <S.Content>
                 <S.Headline ref={headlineRef}>
-                    We started with Drilling Engineering, but we have
+                    New Agents,
                     <br />
-                    <span>BIG plans</span>
+                    <span>New Solutions</span>
                 </S.Headline>
                 <S.HeadlineMob ref={headlineMobRef}>
-                    We started with Drilling Engineering, but we have <span>BIG plans</span>
+                    New Agents,
+                    <br />
+                    <span>New Solutions</span>
                 </S.HeadlineMob>
                 <S.PathBlock>
-                    <S.PathStart>
+                    {/* <S.PathStart>
                         <S.PathStartBottom>Drilling Engineering</S.PathStartBottom>
-                    </S.PathStart>
+                    </S.PathStart> */}
                     <S.PathList>
                         {pathItems.map((item, index) => (
                             <S.PathItem
@@ -160,8 +164,11 @@ function DrillingEngineeringSection() {
                             </S.PathItem>
                         ))}
                     </S.PathList>
-                    <S.PathEnd ref={finishRef}>AND SO ON…</S.PathEnd>
+                    {/* <S.PathEnd ref={finishRef}>AND SO ON…</S.PathEnd> */}
                 </S.PathBlock>
+                <S.Text>
+                    The Marketplace is regularly refreshed with new AI Agents that cover various Energy sectors, functions, and goals—ranging from basic calculations to complex workflows.
+                </S.Text>
             </S.Content>
         </S.DrillingEngineeringSection>
     )

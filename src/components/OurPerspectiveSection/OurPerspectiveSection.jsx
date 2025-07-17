@@ -60,7 +60,9 @@ function OurPerspectiveSection({name}) {
             <S.Content ref={contentRef}>
                 <S.HeaderImg>
                     <S.ContentHeader>
-                        Our Perspective
+                        One task. <br />
+                        One AI Agent. <br />
+                        <span>Infinite Possibilities.</span>
                     </S.ContentHeader>
                     <S.Img>
                         <S.TopLeft/>

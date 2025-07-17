@@ -18,7 +18,7 @@ export const Scale = styled.svg`
 
 export const CounterContainer = styled.div`
     position: absolute;
-    height: 9693px;
+    height: 8007px;
     z-index: 52;
     right: 0;
     top: 831px;

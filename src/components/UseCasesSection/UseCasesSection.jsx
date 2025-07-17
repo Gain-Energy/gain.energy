@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Cases from './Cases';
 import ThirdGradient from '../Gradients/ThirdGradient';
 import JoinButton from './JoinButton';
+import Shadow from "../Shadow/Shadow";
 import * as S from './style';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -59,6 +60,8 @@ function UseCasesSection({name}) {
 
     return (
         <S.UseCasesSection ref={scrollToRef} id="cases">
+            <Shadow transform={true}/>
+            <Shadow transform={false}/> 
             <S.Top ref={topRef}> 
                 <ThirdGradient/>
                 <S.LogoHeadline>
@@ -74,11 +77,11 @@ function UseCasesSection({name}) {
                         </defs>
                     </S.Logo>
                     <S.Headline>
-                        Use Case Examples
+                        AI Agents Examples
                     </S.Headline>
                 </S.LogoHeadline>
                 <S.Text>
-                    We start with specific use cases and build custom AI/ML solutions or agents to solve each of them impeccably. Users can expand that list by adding their own AI Agents to execute any other tasks. 
+                    We start with specific use cases and build custom AI Agents to solve each of them impeccably.                
                 </S.Text>
             </S.Top>
             <Cases/>

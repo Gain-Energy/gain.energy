@@ -18,7 +18,7 @@ export const MenuContainer = styled.div`
     justify-content: flex-start;
     padding-left: 30px;
     background: var(--us_fill-dark_grey);
-    width: 1030px;
+    width: 945x;
     height: 76px;
 
     @media (max-width: 1024px) {

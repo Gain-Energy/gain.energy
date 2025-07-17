@@ -8,8 +8,8 @@ function Scale() {
     return (
         <S.Scale 
             width={isMobile ? "16" : isTablet ? "29" : "29"}
-            height={isMobile ? "5622" : isTablet ? "5720" : "9693"} 
-            viewBox={isMobile ? "0 0 16 5622" : isTablet ? "0 0 29 5720" : "0 0 29 9693"} 
+            height={isMobile ? "5622" : isTablet ? "5720" : "8007"} 
+            viewBox={isMobile ? "0 0 16 5622" : isTablet ? "0 0 29 5720" : "0 0 29 8007"} 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
         >
