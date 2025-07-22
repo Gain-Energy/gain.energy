@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+import Shadow from "../Shadow/Shadow";
 import * as S from './style';
 
 import pathItems from '../../data/pathItems';
@@ -13,6 +14,7 @@ function DrillingEngineeringSection() {
     const itemsRef = useRef([])
     const finishRef = useRef(null)
     const headlineRef = useRef(null)
+    const textRef = useRef(null)
     const headlineMobRef = useRef(null)
 
     const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
@@ -58,6 +60,26 @@ function DrillingEngineeringSection() {
         )
 
         gsap.fromTo(
+            textRef.current,
+            {
+                opacity: 0,
+                y: '20%' 
+            }, 
+            {
+                opacity: 1, 
+                y: '0%', 
+                duration: 1, 
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: textRef.current,
+                    start: isMobile ? 'top-=30% 50%' : isTablet ? 'top-=30% 60%' : 'top-=30% 50%', 
+                    toggleActions: 'play none none none', 
+                    // markers: true
+                }
+            }
+        )
+
+        gsap.fromTo(
             headlineMobRef.current,
             {
                 opacity: 0,
@@ -80,7 +102,7 @@ function DrillingEngineeringSection() {
                             gsap.to(el, {
                                 scrollTrigger: {
                                     trigger: el,
-                                    start: isMobile ? "top+=10px center+=80px" : isTablet ? "top+=10px center+=30px" : "top+=10px center+=80px",
+                                    start: isMobile ? "top+=10px center+=80px" : isTablet ? "top-=10px center+=35px" : "top+=10px center+=80px",
                                     onEnter: () => handleActivate(index),
                                     onLeaveBack: () => handleDeactivate(index),
                                     // markers: true
@@ -121,19 +143,22 @@ function DrillingEngineeringSection() {
 
     return (
         <S.DrillingEngineeringSection>
+            <Shadow/>
             <S.Content>
                 <S.Headline ref={headlineRef}>
-                    We started with Drilling Engineering, but we have
+                    New Agents,
                     <br />
-                    <span>BIG plans</span>
+                    <span>New Solutions</span>
                 </S.Headline>
                 <S.HeadlineMob ref={headlineMobRef}>
-                    We started with Drilling Engineering, but we have <span>BIG plans</span>
+                    New Agents,
+                    <br />
+                    <span>New Solutions</span>
                 </S.HeadlineMob>
                 <S.PathBlock>
-                    <S.PathStart>
+                    {/* <S.PathStart>
                         <S.PathStartBottom>Drilling Engineering</S.PathStartBottom>
-                    </S.PathStart>
+                    </S.PathStart> */}
                     <S.PathList>
                         {pathItems.map((item, index) => (
                             <S.PathItem
@@ -160,8 +185,11 @@ function DrillingEngineeringSection() {
                             </S.PathItem>
                         ))}
                     </S.PathList>
-                    <S.PathEnd ref={finishRef}>AND SO ON…</S.PathEnd>
+                    {/* <S.PathEnd ref={finishRef}>AND SO ON…</S.PathEnd> */}
                 </S.PathBlock>
+                <S.Text ref={textRef}>
+                    The Marketplace is regularly refreshed with new AI Agents that cover various Energy sectors, functions, and goals—ranging from basic calculations to complex workflows.
+                </S.Text>
             </S.Content>
         </S.DrillingEngineeringSection>
     )

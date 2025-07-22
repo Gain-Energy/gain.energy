@@ -1,10 +1,75 @@
+import { useState, useEffect } from 'react';
 import FirstGradient from '../Gradients/FirstGradient';
 import SecondGradient from '../Gradients/SecondGradient';
 import * as S from './style';
 
 function FirstSection() {
+    const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        if (open) {
+            document.body.style.overflowY = 'hidden';
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.body.style.overflowY = 'auto';
+            document.documentElement.style.overflowY = 'auto';
+        }
+        return () => {
+            document.body.style.overflowY = 'auto';
+            document.documentElement.style.overflowY = 'auto';
+        };
+    }, [open])
+
     return (
         <S.FirstSection>
+            {open && (
+                <div
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backdropFilter: 'blur(5px)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        zIndex: 999,
+                        opacity: open ? 1 : 0,
+                        transition: 'opacity 0.3s ease',
+                    }}
+                    onClick={() => setOpen(false)}
+                >
+                    <div
+                        style={{
+                            width: '80%',
+                            height: '80%',
+                            backgroundColor: 'rgb(8, 2, 49)',
+                            borderRadius: '8px',
+                            overflow: 'hidden',
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <p style={{
+                            position: 'absolute',
+                            zIndex: 1000,
+                            color: 'white',
+                            right: 'calc(10% + 36px)',
+                            top: 'calc(10% + 36px)',
+                            cursor: 'pointer',
+                            fontSize: 20
+                        }}
+                            onClick={() => setOpen(false)}
+                        >Close</p>
+                        <iframe
+                            title="submission form"
+                            style={{ width: "100%", height: "100%", border: 'none' }}
+                            src="https://uo8s896zgf1.typeform.com/to/zPgTCKZF"
+                        ></iframe>
+                    </div>
+                </div>
+            )}
             <S.BlackOverlay>
                 <S.OilDerrick width="42" height="63" viewBox="0 0 42 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_317_1870)">
@@ -35,10 +100,11 @@ function FirstSection() {
             <S.Content>
                 <FirstGradient/>
                 <SecondGradient/>
-                <S.ContentLeft>
-                    <S.ContentHeader>
-                        SPECIALIZED AI PLATFORM BUILT EXCLUSIVELY FOR OIL AND GAS ENGINEERS
-                    </S.ContentHeader>
+                <S.ContentHeader>
+                        Specialized Oil and Gas Marketplace of Data-Driven and Task-Specific AI Agents
+                </S.ContentHeader>
+                <S.BottomContent>
+                    <S.ContentLeft>
                     <S.ContentLogo width="386" height="117" viewBox="0 0 386 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M213.736 83.6486H207.664V56.2047L198.867 83.6486H190.598L181.8 56.2047V83.6486H175.728V50.3906H185.816L194.757 78.5775L203.649 50.3906H213.736V83.6486ZM240.431 70.8573L234.695 55.0887L229.007 70.8573H240.431ZM242.344 76.1129H227.094L224.369 83.6486H217.819L230.631 50.3906H238.855L251.619 83.6486H245.07L242.344 76.1129ZM0 77.9284V50.3906H6.12097V76.9497C6.12097 77.4166 6.21562 77.7407 6.40801 77.9284C6.59809 78.1138 6.91591 78.2068 7.36456 78.2068H20.8447C21.2903 78.2068 21.6089 78.1138 21.8012 77.9284C21.9913 77.7407 22.0875 77.4166 22.0875 76.9497V50.3906H28.2062V77.9284C28.2062 79.5082 27.696 80.8568 26.6771 81.975C25.6582 83.091 24.1753 83.6486 22.2314 83.6486H5.97784C4.03396 83.6486 2.55105 83.091 1.52986 81.975C0.510979 80.8568 0 79.5082 0 77.9284ZM54.1799 66.7168C54.6255 66.7168 54.9433 66.6253 55.1357 66.4376C55.3258 66.2522 55.422 65.9281 55.422 65.462V57.1353C55.422 56.641 55.3258 56.2985 55.1357 56.1131C54.9433 55.9255 54.5939 55.8347 54.0829 55.8347H39.7424V66.7168H54.1799ZM33.6215 50.3906H55.2296C57.2704 50.3906 58.831 50.9482 59.9153 52.0665C60.9989 53.1825 61.5406 54.5311 61.5406 56.1131V66.4376C61.5406 68.0196 61.0304 69.3683 60.0115 70.4842C58.9926 71.6025 57.5097 72.1601 55.5659 72.1601H39.7424V83.6486H33.6215V50.3906ZM67.5377 78.2068H86.0368C86.5478 78.2068 86.8972 78.1138 87.0895 77.9284C87.2796 77.7407 87.3766 77.4005 87.3766 76.904V70.7177C87.3766 69.8176 86.931 69.3683 86.0368 69.3683H72.3166C70.3727 69.3683 68.8898 68.8107 67.8709 67.6955C66.852 66.5772 66.341 65.2286 66.341 63.6488V56.1131C66.341 54.5311 66.8836 53.1825 67.9671 52.0665C69.0514 50.9482 70.6128 50.3906 72.6529 50.3906H92.1085V55.8347H73.7995C72.9053 55.8347 72.4597 56.268 72.4597 57.1353V62.7182C72.4597 63.182 72.5567 63.5092 72.7467 63.6946C72.9399 63.8792 73.2577 63.9738 73.7033 63.9738H87.2796C89.2558 63.9738 90.7849 64.5314 91.8692 65.6466C92.9535 66.7648 93.4952 68.1135 93.4952 69.6955V77.9284C93.4952 79.541 92.9766 80.8972 91.9423 81.9979C90.905 83.0979 89.3674 83.6486 87.3266 83.6486H67.5377V78.2068ZM109.353 55.8347H98.595V50.3906H126.229V55.8347H115.471V83.6486H109.353V55.8347ZM153.204 57.1353C153.204 56.641 153.107 56.2985 152.917 56.1131C152.726 55.9255 152.375 55.8347 151.864 55.8347H137.523V65.4162H151.961C152.406 65.4162 152.726 65.3224 152.917 65.137C153.107 64.9494 153.204 64.6252 153.204 64.1584V57.1353ZM153.347 70.8573H152.343L159.228 83.6486H152.486L145.698 70.8573H137.523V83.6486H131.499V50.3906H153.013C155.051 50.3906 156.614 50.9482 157.696 52.0665C158.78 53.1825 159.322 54.5311 159.322 56.1131V65.137C159.322 66.7168 158.814 68.0654 157.792 69.1837C156.773 70.2997 155.291 70.8573 153.347 70.8573ZM164.057 50.3906H170.177V83.6486H164.057V50.3906Z" fill="#F9F6EF"/>
                         <path fillRule="evenodd" clipRule="evenodd" d="M335.616 0C295.458 126.716 247.207 105.294 263.148 16.752H285.232C227.958 156.284 333.651 149.4 386.001 0H335.616Z" fill="url(#paint0_linear_317_419)"/>
@@ -50,6 +116,7 @@ function FirstSection() {
                             </linearGradient>
                         </defs>
                     </S.ContentLogo>
+                    <S.Button onClick={() => setOpen(true)}>Join Exclusive Beta</S.Button>
                 </S.ContentLeft>
                 <S.ContentRight>
                     <S.ContentRightHeader>
@@ -62,6 +129,7 @@ function FirstSection() {
                         <path d="M12 8.5L2.17658e-07 5.2958e-07L9.53674e-07 17L12 8.5Z" fill="#31ED37"/>
                     </S.Arrow>
                 </S.ContentRight>
+                </S.BottomContent>
             </S.Content>
         </S.FirstSection>
     )

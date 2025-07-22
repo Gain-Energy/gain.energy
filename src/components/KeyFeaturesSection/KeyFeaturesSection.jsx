@@ -1,10 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import { useScroll } from '../contexts/ScrollProvider';
+import { usePopup } from '../contexts/PopupProvider';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import KeyFeaturesPopup from '../KeyFeaturesPopup/KeyFeaturesPopup';
 import * as S from './style';
+import { useMediaQuery } from "react-responsive";
 
 import featuresTexts from '../../data/featuresTexts';
 
@@ -13,12 +16,18 @@ gsap.registerPlugin(ScrollTrigger);
 function KeyFeaturesSection({ name }) {
     const { registerSection } = useScroll()
     const [textPosition, setTextPosition] = useState(featuresTexts[0].top)
+    const [activeFeature, setActiveFeature] = useState(null);
     const [text, setText] = useState(null)
+    const [img, setImg] = useState(null)
     const [activeId, setActiveId] = useState(null)
     const textRef = useRef(null)
     const scrollToRef = useRef(null)
     const topRef = useRef(null)
     const featuresRef = useRef(null)
+    const {popupOpen ,togglePopup} = usePopup()
+
+    const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
+    const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
 
     const [currentSlide, setCurrentSlide] = useState(0)
     const [sliderRef] = useKeenSlider({
@@ -93,26 +102,26 @@ function KeyFeaturesSection({ name }) {
                     const triggers = featuresTexts.map((item, index) => {
                         return ScrollTrigger.create({
                             trigger: `#features-item-${item.id}`,
-                            start: 'top-=10px center',
-                            end: 'bottom+=25px center',
+                            start: isTablet ? 'top center' : isMobile ? 'top-=10px center' : 'top-=10px center',
+                            end: isTablet ? 'bottom center' : isMobile ? 'bottom+=40px center' : 'bottom+=40px center',
                             key: index,
                             // markers: true,
                             onEnter: () => {
-                                handleFeatureEnter(item.id, item.top, item.text)
+                                handleFeatureEnter(item.id, item.top, item.text, item.imageSrc[0], item.header)
                             },
                             onEnterBack: () => {
-                                handleFeatureEnter(item.id, item.top, item.text)
+                                handleFeatureEnter(item.id, item.top, item.text, item.imageSrc[0], item.header)
                             },
                             onLeave: () => {
                                 if (index === featuresTexts.length - 1) {
                                     setActiveId(null)
-                                    gsap.to(textRef.current, { opacity: 0, duration: 0.2 })
+                                    gsap.to(textRef.current, { opacity: 0, duration: 0.2, cursor: 'default' })
                                 }
                             },
                             onLeaveBack: () => {
                                 if (index === 0) {
                                     setActiveId(null);
-                                    gsap.to(textRef.current, { opacity: 0, duration: 0.2 });
+                                    gsap.to(textRef.current, { opacity: 0, duration: 0.2, cursor: 'default' });
                                 }
                             },
                         })
@@ -125,9 +134,9 @@ function KeyFeaturesSection({ name }) {
             }
 
         )
-    }, [name, registerSection])
+    }, [isMobile, isTablet, name, registerSection])
 
-    const handleFeatureEnter = (featureId, newPosition, newText) => {
+    const handleFeatureEnter = (featureId, newPosition, newText, newImg, newHeading) => {
         gsap.to(textRef.current, {
             opacity: 0,
             duration: 0.1,
@@ -135,8 +144,10 @@ function KeyFeaturesSection({ name }) {
             onComplete: () => {
                 setActiveId(featureId)
                 setText(newText)
+                setImg(newImg)
                 setTextPosition(newPosition)
                 gsap.to(textRef.current, {
+                    cursor: 'pointer',
                     opacity: 1,
                     duration: 0.1,
                     ease: 'linear',
@@ -145,8 +156,21 @@ function KeyFeaturesSection({ name }) {
         })
     }
 
+    const selectActiveFeature = (featureId) => {
+        if (activeId) {
+            const feature = featuresTexts[featureId - 1]
+            setActiveFeature(feature)
+            togglePopup()
+        }
+    }
+
+    const handleUpdateFeature = (updatedUser) => {
+        setActiveFeature(updatedUser)
+    }
+
     return (
         <S.KeyFeaturesSection ref={scrollToRef} id="features" key="features">
+            {popupOpen && <KeyFeaturesPopup activeFeature={activeFeature} onUpdateFeature={handleUpdateFeature}/>}
             <S.Top ref={topRef}>
                 <S.TopLeft>
                     <S.Logo width="257" height="78" viewBox="0 0 257 78" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,6 +216,7 @@ function KeyFeaturesSection({ name }) {
                             id={`features-item-${item.id}`}
                             data-position={item.top}
                             isActive={activeId === item.id}
+                            onClick={() => selectActiveFeature(item.id)}
                         >
                             {item.header}
                         </S.FeaturesItem>
@@ -204,15 +229,20 @@ function KeyFeaturesSection({ name }) {
                             key={index}
                             className="keen-slider__slide"
                             isActive={index === currentSlide}
+                            onClick={() => selectActiveFeature(item.id)}
                         >
                             <S.FeaturesHeading>{item.header}</S.FeaturesHeading>
+                            <S.FeaturesImage src={item.imageSrc[0]}/>
                             <S.MobileText isActive={index === currentSlide} >{item.text}</S.MobileText>
+                            <S.FeaturesButton>Read more</S.FeaturesButton>
                         </S.FeaturesMobileCard>
                     ))}
                 </S.FeaturesMobileBlock>
-                <S.FeaturesText ref={textRef} textPosition={textPosition}>
-                    {text}
-                </S.FeaturesText>
+                <S.FeaturesContent ref={textRef} textPosition={textPosition} onClick={() => selectActiveFeature(activeId)}>
+                    <S.FeaturesImage src={img}/>
+                    <S.FeaturesText>{text}</S.FeaturesText>
+                    <S.FeaturesButton>Read more</S.FeaturesButton>
+                </S.FeaturesContent>
             </S.FeaturesBlock>
         </S.KeyFeaturesSection>
     )

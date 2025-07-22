@@ -21,7 +21,7 @@ function Counter() {
         ScrollTrigger.create({
             trigger: containerRef.current,
             start: "top center",
-            end: isMobile ? "bottom+=280px bottom" : isTablet ? "bottom+=260px bottom" : "bottom+=200px bottom", 
+            end: isMobile ? "bottom+=280px bottom" : isTablet ? "bottom+=310px bottom" : "bottom+=250px bottom", 
             scrub: true, 
             onUpdate: (self) => {
                 const progress = self.progress

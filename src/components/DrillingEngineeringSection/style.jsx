@@ -1,26 +1,40 @@
 import styled from '@emotion/styled';
-import backgroundImg from '../../img/oil-layer-4.jpg'
+import backgroundImg from '../../img/oil-layer-4.png'
 
 export const DrillingEngineeringSection = styled.section`
-    padding-top: 185px;
-    padding-bottom: 60px;
-    background: url(${backgroundImg});
-    background-size: cover;
+    position: relative;
+    padding-bottom: 160px;
+    background: #070707;
+
+    ::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(${backgroundImg});
+        background-size: cover;
+        z-index: 0;
+    }
 
     @media (max-width: 1024px) {
         padding-top: 0;
+        padding-bottom: 200px;
     }
 
     @media (max-width: 480px) {
         padding-top: 45px;
+        padding-bottom: 235px;
     }
 `
 
 export const Content = styled.div`
     position: relative;
     max-width: 1280px; 
-    height: 875px;
+    height: 1300px;
     display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     padding: 0 30px;
 
@@ -28,10 +42,14 @@ export const Content = styled.div`
         max-width: 600px; 
         padding: 0 20px;
         height: 445px;
+        gap: 100px;
     }
 
     @media (max-width: 480px) {
+        gap: 10px;
         height: 626px;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 `
 
@@ -84,18 +102,20 @@ export const HeadlineMob = styled.h2`
 
 export const PathBlock = styled.div`
     position: absolute;
-    padding-left: 495px;
+    top: 180px;
+    padding-left: 319px;
     display: flex;
     flex-direction: column;
     gap: 78px;
 
     @media (max-width: 1024px) {
+        top: 135px;
         padding-left: 85px;
         gap: 30px;
     }
 
     @media (max-width: 480px) {
-        top: 129px;
+        top: 160px;
         padding-left: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -165,7 +185,6 @@ export const PathList = styled.div`
     display: flex;
     flex-direction: column;
     gap: 19px;
-    padding-left: 8px;
 
     @media (max-width: 1024px) {
         padding-left: 92px;
@@ -191,7 +210,7 @@ export const PathItem = styled.div`
 `
 
 export const PathItemText = styled.p`
-    width: 215px;
+    width: 315px;
     text-align: right;
     color: ${({ isActive }) => 
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
@@ -290,5 +309,26 @@ export const PathEnd = styled.p`
         left: 50%;
         right: auto;
         transform: translateX(-50%);
+    }
+`
+
+export const Text = styled.p`
+    width: 400px;
+    font-family: "JetBrains Mono";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+    color: var(--us_fill-white);
+
+    @media (max-width: 1024px) {
+        width: 300px;
+        font-size: 12px;  
+    }
+
+    @media (max-width: 480px) {
+        width: 300px;
+        font-weight: 400;
+        font-size: 10px;    
+        line-height: 130%;
     }
 `

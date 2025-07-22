@@ -1,5 +1,6 @@
 import ScrollProvider from '../../components/contexts/ScrollProvider';
 import { MenuProvider } from '../../components/contexts/MenuProvider';
+import { PopupProvider } from '../../components/contexts/PopupProvider';
 import { Lenis } from '@studio-freight/react-lenis';
 import GlobalStyles from '../../components/GlobalStyles';
 import { useMediaQuery } from "react-responsive";
@@ -28,36 +29,38 @@ function HomePage() {
   return (
     <ScrollProvider>
       <MenuProvider>
-        <Lenis
-          root
-          options={{ smooth: true }}
-        >
-          <GlobalStyles />
-          {isMobile ?
-            <PathDrillingMob />
-            :
-            isTablet ?
-              <PathDrillingTabl />
+        <PopupProvider>
+          <Lenis
+            root
+            options={{ smooth: true }}
+          >
+            <GlobalStyles />
+            {isMobile ?
+              <PathDrillingMob />
               :
-              <PathDrilling />
-          }
-          <Scale />
-          <Counter />
-          <Header />
-          <Menu />
-          <FirstSection />
-          <OurPerspectiveSection name={'Perspective'} />
-          <KeyFeaturesSection name={'Features'} />
-          <UseCasesSection name={'Cases'} />
-          <OurProductsSection name={'Products'} />
-          <BlackLayer position={'first'} />
-          <IntelegentCoreSection name={'Core'} />
-          <BlackLayer position={'second'} />
-          <DrillingEngineeringSection />
-          <CompanySection name={'Company'} />
-          <PartnersAndNewsSection />
-          <Footer name={'Contacts'} />
-        </Lenis>
+              isTablet ?
+                <PathDrillingTabl />
+                :
+                <PathDrilling />
+            }
+            <Scale />
+            <Counter />
+            <Header />
+            <Menu />
+            <FirstSection />
+            <OurPerspectiveSection name={'Perspective'} />
+            <KeyFeaturesSection name={'Features'} />
+            <UseCasesSection name={'Cases'} />
+            {/* <OurProductsSection name={'Products'} /> */}
+            {/* <BlackLayer position={'first'} /> */}
+            <IntelegentCoreSection name={'Products'} />
+            {/* <BlackLayer position={'second'} /> */}
+            <DrillingEngineeringSection />
+            <CompanySection name={'Company'} />
+            <PartnersAndNewsSection />
+            <Footer name={'Contacts'} />
+          </Lenis>
+        </PopupProvider>
       </MenuProvider>
     </ScrollProvider>
   )

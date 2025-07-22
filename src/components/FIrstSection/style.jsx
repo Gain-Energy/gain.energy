@@ -7,7 +7,7 @@ export const FirstSection = styled.section`
     height: 627px;
     background-image: url(${backgroundImg});
     background-size: cover;
-    background-position-y: bottom;
+    background-position-y: -100px;
 
     @media (max-width: 1024px) {
         height: 483px;
@@ -58,7 +58,7 @@ export const Content = styled.div`
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 366px;
+    padding-top: 279px;
     max-width: 1280px; 
     margin: 0 auto;
     padding-left: 30px;
@@ -68,13 +68,13 @@ export const Content = styled.div`
         max-width: 600px;
         padding-top: 169px;
         margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
         justify-content: space-between;
     }
 
     @media (max-width: 480px) {
-        padding-top: 235px;
+        padding-top: 188px;
         flex-direction: column;
     }
 `
@@ -83,7 +83,7 @@ export const ContentLeft = styled.div`
     display: flex;
     flex-direction: column;
     z-index: 1;
-    gap: 50px;
+    gap: 10px;
 
     @media (max-width: 1024px) {
         gap: 20px;
@@ -97,7 +97,7 @@ export const ContentLeft = styled.div`
 `
 
 export const ContentHeader = styled.h1`
-    width: 641px;
+    width: 759px;
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
@@ -106,7 +106,7 @@ export const ContentHeader = styled.h1`
     font-style: normal;
     font-weight: 300;
     line-height: 89%;
-    text-transform: uppercase;
+    z-index: 1;
 
     @media (max-width: 1024px) {
         width: 300px;
@@ -122,6 +122,25 @@ export const ContentHeader = styled.h1`
         font-style: normal;
         font-weight: 300;
         line-height: 90%; 
+    }
+`
+
+export const BottomContent = styled.div`    
+    display: flex;
+    margin-top: 60px;
+    gap: 250px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+        margin-top: 30px;
+        gap: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 480px) {
+        position: relative;
+        gap: 30px;
     }
 `
 
@@ -135,21 +154,80 @@ export const ContentLogo = styled.svg`
     }
 `
 
+export const Button = styled.button`
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 192px;
+    height: 44px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-color: #00AAFF; 
+    transition: background-color 0.3s ease;
+
+    font-family: "PP Nikkei Pacific";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 105%;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+        width: 150px;
+        height: 44px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 105%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        position: absolute;
+        bottom: -72px;
+        width: 100%;
+        height: 44px;   
+    }
+
+    ::before {
+        content: 'Join Exclusive Beta';
+        padding: 14px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #1BD2A3 0%, #39FF3F 100%);
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    :hover::before {
+        opacity: 0; 
+    }
+
+    :hover {
+        background-color: #FFFFFF; 
+
+        @media (max-width: 1024px) {
+            background: linear-gradient(to right, #1BD2A3 0%, #39FF3F 100%);
+        }
+    }
+`
+
 export const ContentRight = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-top: 143px;
     z-index: 1;
     gap: 20px;
 
     @media (max-width: 1024px) {
-        padding-top: 89px;
         gap: 15px;
     }
 
     @media (max-width: 480px) {
-        padding-top: 40px;
         gap: 10px;
     }
 `
@@ -195,7 +273,7 @@ export const ContentRightText = styled.p`
 
 export const Arrow = styled.svg`
     position: absolute;
-    top: 150px;
+    top: 8px;
     width: 12px;
     height: 17px;
     left: -32px;
@@ -203,14 +281,14 @@ export const Arrow = styled.svg`
     @media (max-width: 1024px) {
         width: 7px;
         height: 10px;
-        top: 95px;
+        top: 4px;
         left: -20px;
     }
 
     @media (max-width: 480px) {
         width: 7px;
         height: 10px;
-        top: 44px;
+        top: 4px;
         left: -18px;
     }
 `

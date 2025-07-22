@@ -51,15 +51,15 @@ function PathDrillingTabl() {
                     end: "bottom+=300px bottom",
                     scrub: true,
                     // markers: true,
-                    onUpdate: (self) => {
-                        const progress = self.progress
+                    // onUpdate: (self) => {
+                    //     const progress = self.progress
 
-                        if (progress > 0.75 && progress <= 0.76) {
-                            gsap.to(union, { opacity: 0, duration: 0.2 });
-                        } else {
-                            gsap.to(union, { opacity: 1, duration: 0.2 });
-                        }
-                    },
+                    //     if (progress > 0.75 && progress <= 0.76) {
+                    //         gsap.to(union, { opacity: 0, duration: 0.2 });
+                    //     } else {
+                    //         gsap.to(union, { opacity: 1, duration: 0.2 });
+                    //     }
+                    // },
                 },
                 motionPath: {
                     path: path,
@@ -103,8 +103,8 @@ function PathDrillingTabl() {
             </S.Union>
             <S.PathDrilling 
                 width="2" 
-                height="5780"
-                viewBox="0 0 2 5780" 
+                height="4380"
+                viewBox="0 0 2 4380" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
             >

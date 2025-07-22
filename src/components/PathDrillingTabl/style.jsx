@@ -28,37 +28,37 @@ export const PathDrilling = styled.svg`
     left: 320px;
     top: 431px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        black 74%,
-        transparent 75%,
-        transparent 75.8%,
-        black 76.5%,
-        black 80%,
-        transparent 81%,
-        black 82%,
-    black 98.69%,
-    transparent 98.7%  
-    );
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        black 74%,
-        transparent 75%,
-        transparent 75.8%,
-        black 76.5%,
-        black 80%,
-        transparent 81.2%,
-        transparent 81.5%,
-        black 83%,
-    black 98.69%,
-    transparent 98.7%
-    );
+    // mask-image: linear-gradient(
+    //     to bottom,
+    //     black 74%,
+    //     transparent 75%,
+    //     transparent 75.8%,
+    //     black 76.5%,
+    //     black 80%,
+    //     transparent 81%,
+    //     black 82%,
+    // black 98.69%,
+    // transparent 98.7%  
+    // );
+    // -webkit-mask-image: linear-gradient(
+    //     to bottom,
+    //     black 74%,
+    //     transparent 75%,
+    //     transparent 75.8%,
+    //     black 76.5%,
+    //     black 80%,
+    //     transparent 81.2%,
+    //     transparent 81.5%,
+    //     black 83%,
+    // black 98.69%,
+    // transparent 98.7%
+    // );
 `
 
 export const DrillingFinish = styled.p`
     position: absolute;
     left: 279px;
-    top: 6148px;
+    top: 4820px;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 14px;

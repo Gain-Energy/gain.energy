@@ -62,7 +62,7 @@ function JoinButton() {
                     </S.RainbowContainer>
                     <S.JoinButtonInner ref={innerRef}>
                         <S.UpperText>Click TO</S.UpperText>
-                        <S.LowerText>Join Exclusive Trial</S.LowerText>
+                        <S.LowerText>Join Exclusive Beta</S.LowerText>
                     </S.JoinButtonInner>
                 </S.JoinButtonOuter>
             </S.JoinButtonLink>

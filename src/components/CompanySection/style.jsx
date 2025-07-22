@@ -28,6 +28,7 @@ export const Content = styled.div`
     padding: 80px 30px 0 30px;
 
     @media (max-width: 1024px) {
+        max-width: 600px;
         gap: 20px;
         padding: 20px 30px 0 30px;
     }

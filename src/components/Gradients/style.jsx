@@ -56,7 +56,7 @@ export const ThirdGradient = styled.svg`
     left: -80px;
     width: 1220px;
     height: 1500px;
-    z-index: 1;
+    z-index: 2;
     filter: blur(10px);
 
     @media (max-width: 480px) {

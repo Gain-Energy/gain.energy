@@ -1,11 +1,23 @@
 import styled from '@emotion/styled';
-import backgroundImg from '../../img/oil-layer-1.jpg'
+import backgroundImg from '../../img/oil-layer-1.png'
 
 export const KeyFeaturesSection = styled.section`
+    position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
-    background: url(${backgroundImg});
-    background-size: cover;
+    background: #000000;
+
+    ::before {
+        content: "";
+        position: absolute;
+        top: -152px;
+        left: 0;
+        width: 100%;
+        height: 1139px;
+        background: url(${backgroundImg});
+        background-size: cover;
+        z-index: 0;
+    }
 
     @media (max-width: 1024px) {
         padding-bottom: 50px;
@@ -103,6 +115,7 @@ export const BigText = styled.p`
     font-style: normal;
     font-weight: 300;
     line-height: 120%;
+    visibility: hidden;
 
     @media (max-width: 1024px) {
         padding-top: 30px;
@@ -114,6 +127,7 @@ export const BigText = styled.p`
     }
 
     @media (max-width: 480px) {
+        height: 0;
         padding-top: 0;
         width: 300px;
         font-size: 14px;
@@ -175,14 +189,14 @@ export const FeaturesBlock = styled.div`
 export const FeaturesList = styled.div`
     display: flex;
     flex-direction: column;
-    width: 345px;
-    padding-left: 296px;
+    width: 450px;
+    padding-left: 192px;
     gap: 50px;
     z-index: 3;
 
     @media (max-width: 1024px) {
-        padding-left: 90px;
-        width: 150px;
+        padding-left: 70px;
+        width: 185px;
         gap: 20px;
     }
 
@@ -226,12 +240,43 @@ export const FeaturesMobileBlock = styled.div`
 `
 
 export const FeaturesMobileCard = styled.div`
+    position: relative;
     max-width: 230px;
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     overflow: visible !important;
+
+    ::after {
+        content: "";
+        position: absolute;
+        opacity: ${({ isActive }) => 
+            (isActive ? '1' : '0')};
+        top: 15px;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border: 2px solid var(--us_fill-green); 
+        border-bottom: none;
+        border-left: none;
+        transition: all .3s ease;
+    }
+
+    ::before {
+        content: "";
+        position: absolute;
+        opacity: ${({ isActive }) => 
+            (isActive ? '1' : '0')};
+        bottom: -10px;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border: 2px solid var(--us_fill-green);
+        border-top: none;
+        border-left: none;
+        transition: all .3s ease;
+    }
 
     &.keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide  {
         overflow: visible;
@@ -262,108 +307,183 @@ export const MobileText = styled.p`
     line-height: 120%;
     transition: all .3s ease;
 
-    ::after {
-        content: "";
-        position: absolute;
-        opacity: ${({ isActive }) => 
-            (isActive ? '1' : '0')};
-        top: -10px;
-        right: 0;
-        width: 10px;
-        height: 10px;
-        border: 2px solid var(--us_fill-green); 
-        border-bottom: none;
-        border-left: none;
-        transition: all .3s ease;
-    }
-
-    ::before {
-        content: "";
-        position: absolute;
-        opacity: ${({ isActive }) => 
-            (isActive ? '1' : '0')};
-        bottom: -10px;
-        right: 0;
-        width: 10px;
-        height: 10px;
-        border: 2px solid var(--us_fill-green);
-        border-top: none;
-        border-left: none;
-        transition: all .3s ease;
-    }
+    display: -webkit-box;      
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 5;      
+    overflow: hidden;          
+    text-overflow: ellipsis;  
 `
 
-export const FeaturesText = styled.p`
+export const FeaturesContent = styled.div`
+    cursor: pointer;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
     width: 425px;
     right: 167px;
     opacity: 0;
     top: ${props => props.textPosition || '8px'};
     align-self: start;
+    transition: top .3s ease;
+
+    @media (max-width: 1024px) {
+        width: 260px;
+        right: 0;
+    }
+
+    @media (max-width: 480px) { 
+        display: none;
+        width: 230px;
+    }
+
+    ::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        border: 2px solid var(--us_fill-green); 
+        border-bottom: none;
+        border-left: none;
+
+        @media (max-width: 1024px) {
+            width: 10px;
+            height: 10px;
+        }
+
+        @media (max-width: 480px) { 
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    ::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        border: 2px solid var(--us_fill-green);
+        border-top: none;
+        border-left: none;
+
+        @media (max-width: 1024px) {
+            width: 10px;
+            height: 10px;
+        }
+
+        @media (max-width: 480px) { 
+            width: 10px;
+            height: 10px;
+        }
+    }
+`
+
+export const FeaturesImage = styled.img`
+    width: 425px;
+    height: 259px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 155px;
+    }
+
+    @media (max-width: 480px) { 
+        margin-top: 10px;
+        width: 100%;
+        height: 140px;
+    }
+`
+
+export const FeaturesText = styled.p`
     color: var(--us_fill-white);
     font-family: "JetBrains Mono";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; 
-    transition: top .3s ease;
+
+    display: -webkit-box;      
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3;      
+    overflow: hidden;          
+    text-overflow: ellipsis;    
 
     @media (max-width: 1024px) {
-        width: 260px;
-        right: 0;
         font-size: 10px;
     }
 
     @media (max-width: 480px) { 
-        display: none;
-        width: 230px;
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%;
     }
+`
 
-    ::after {
-        content: "";
-        position: absolute;
-        top: -10px;
-        right: 0;
-        width: 15px;
-        height: 15px;
-        border: 2px solid var(--us_fill-green); 
-        border-bottom: none;
-        border-left: none;
+export const FeaturesButton = styled.button`
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 44px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-color: #00AAFF; 
+    transition: background-color 0.3s ease;
 
-        @media (max-width: 1024px) {
-            width: 10px;
-            height: 10px;
-        }
+    font-family: "PP Nikkei Pacific";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 105%;
+    text-transform: uppercase;
 
-        @media (max-width: 480px) { 
-            width: 10px;
-            height: 10px;
-        }
+    @media (max-width: 1024px) {
+        width: 120px;
+        height: 32px;
+    }
+
+    @media (max-width: 480px) {
+        width: 129px;
+        height: 44px;
     }
 
     ::before {
-        content: "";
+        content: 'Read more';
+        padding: 14px 0;
         position: absolute;
-        bottom: -10px;
+        top: 0;
+        left: 0;
         right: 0;
-        width: 15px;
-        height: 15px;
-        border: 2px solid var(--us_fill-green);
-        border-top: none;
-        border-left: none;
+        bottom: 0;
+        background: linear-gradient(to right, #1BD2A3 0%, #39FF3F 100%);
+        transition: opacity 0.3s ease;
+        z-index: 1;
 
         @media (max-width: 1024px) {
-            width: 10px;
-            height: 10px;
+            padding: 10px 0;
         }
 
-        @media (max-width: 480px) { 
-            width: 10px;
-            height: 10px;
+        @media (max-width: 480px) {
+            padding: 15px 0;
+        }
+    }
+
+    :hover::before {
+        opacity: 0; 
+    }
+
+    :hover {
+        background-color: #FFFFFF; 
+
+        @media (max-width: 1024px) {
+            background: linear-gradient(to right, #1BD2A3 0%, #39FF3F 100%);
         }
     }
 `

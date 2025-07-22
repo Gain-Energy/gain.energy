@@ -50,7 +50,7 @@ function Menu() {
                     <S.MenuItem onClick={() => scrollTo('Features')}>Features</S.MenuItem>
                     <S.MenuItem onClick={() => scrollTo('Cases')}>Cases</S.MenuItem>
                     <S.MenuItem onClick={() => scrollTo('Products')}>Products</S.MenuItem>
-                    <S.MenuItem onClick={() => scrollTo('Core')}>Core</S.MenuItem>
+                    {/* <S.MenuItem onClick={() => scrollTo('Core')}>Core</S.MenuItem> */}
                     <S.MenuItem onClick={() => scrollTo('Company')}>Company</S.MenuItem>
                     <S.MenuItem onClick={() => scrollTo('Partners')}>Partners</S.MenuItem>
                     <S.MenuItem onClick={() => scrollTo('News')}>News</S.MenuItem>

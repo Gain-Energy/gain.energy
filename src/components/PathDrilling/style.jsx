@@ -24,24 +24,24 @@ export const PathDrilling = styled.svg`
     left: 449px;
     top: 812px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        black 69.6%,
-        transparent 71.18%,
-        transparent 71.75%,
-        black 75%,
-    black 98.69%,
-    transparent 98.7%  
-    );
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        black 69.6%,
-        transparent 71.18%,
-        transparent 71.75%,
-        black 75%,
-    black 98.69%,
-    transparent 98.7%
-    );
+    // mask-image: linear-gradient(
+    //     to bottom,
+    //     black 69.6%,
+    //     transparent 71.18%,
+    //     transparent 71.75%,
+    //     black 75%,
+    // black 98.69%,
+    // transparent 98.7%  
+    // );
+    // -webkit-mask-image: linear-gradient(
+    //     to bottom,
+    //     black 69.6%,
+    //     transparent 71.18%,
+    //     transparent 71.75%,
+    //     black 75%,
+    // black 98.69%,
+    // transparent 98.7%
+    // );
 
     @media (max-width: 1024px) {
         height: 7200px;
@@ -53,7 +53,7 @@ export const PathDrilling = styled.svg`
 export const DrillingFinish = styled.p`
     position: absolute;
     left: 380px;
-    top: 10520px;
+    top: 8840px;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 24px;

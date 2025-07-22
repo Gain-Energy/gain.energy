@@ -2,11 +2,14 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useScroll } from '../contexts/ScrollProvider';
+import { useMediaQuery } from "react-responsive";
 import * as S from './style';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function OurPerspectiveSection({name}) {
+    const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
+
     const scrollToRef = useRef(null)
 
     const contentRef = useRef(null)
@@ -59,9 +62,19 @@ function OurPerspectiveSection({name}) {
         <S.OurPerspectiveSection ref={scrollToRef} id="perspective">
             <S.Content ref={contentRef}>
                 <S.HeaderImg>
-                    <S.ContentHeader>
-                        Our Perspective
-                    </S.ContentHeader>
+                    {isMobile ? 
+                        <S.ContentHeader>
+                            One task. 
+                            One AI Agent. <br />
+                            <span>Infinite Possibilities.</span>
+                        </S.ContentHeader>
+                        :
+                        <S.ContentHeader>
+                            One task. <br />
+                            One AI Agent. <br />
+                            <span>Infinite Possibilities.</span>
+                        </S.ContentHeader>
+                    }
                     <S.Img>
                         <S.TopLeft/>
                         <S.TopRight/>

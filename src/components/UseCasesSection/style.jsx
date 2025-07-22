@@ -1,12 +1,24 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-import backgroundImg from '../../img/oil-layer-2.jpg'
+import backgroundImg from '../../img/oil-layer-5.png'
 
 export const UseCasesSection = styled.section`
+    position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
-    background: url(${backgroundImg});
-    background-size: cover;
+    background: #000000;
+
+    ::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(${backgroundImg});
+        background-size: cover;
+        z-index: 0;
+    }
 
     @media (max-width: 1024px) {
         padding-top: 50px;
@@ -127,7 +139,7 @@ export const Cases = styled.div`
     max-width: 1438px;
     gap: 161px;
     margin: 0 auto;
-    padding: 80px 30px 0 30px;
+    padding: 160px 30px 0 30px;
     z-index: 2;
 
     @media (max-width: 1024px) {
@@ -154,6 +166,10 @@ export const CasesLeft = styled.div`
     @media (max-width: 1024px) {
         width: 200px;
         gap: 10px;
+
+        div:last-of-type {
+            margin-top: 15px;
+        }
     }
 
     @media (max-width: 480px) { 
@@ -201,7 +217,7 @@ export const Case = styled.div`
 
     @media (max-width: 480px) { 
         padding: ${({ position }) =>
-            position === 'right' ? '15px 0 7px 7px' : '15px 7px 7px 0'};
+            position === 'right' ? '20px 0 7px 7px' : '20px 7px 7px 0'};
         width: 133px;
         font-size: 11px;
         font-style: normal;
@@ -242,6 +258,14 @@ export const Case = styled.div`
             position === 'right' ? 'auto' : '5px'};
             left: ${({ position }) =>
                 position === 'left' ? 'auto' : '5px'};
+        }
+
+        @media (max-width: 480px) { 
+            bottom: 0;
+            right: ${({ position }) =>
+            position === 'right' ? 'auto' : '0'};
+            left: ${({ position }) =>
+                position === 'left' ? 'auto' : '0'};
         }
     }
 `

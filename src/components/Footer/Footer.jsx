@@ -38,8 +38,8 @@ function Footer({ name, type }) {
                         {type ? <S.NavigationLink href='/#perspective'>Perspective</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Perspective')}>Perspective</S.NavigationLink>}
                         {type ? <S.NavigationLink href='/#features'>Features</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Features')} >Features</S.NavigationLink>}
                         {type ? <S.NavigationLink href="/#cases">Cases</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Cases')}>Cases</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#products">Our Products</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Products')} >Our Products</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#core">Core</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Core')} >Core</S.NavigationLink>}
+                        {type ? <S.NavigationLink href="/#products">Products</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Products')} >Products</S.NavigationLink>}
+                        {/* {type ? <S.NavigationLink href="/#core">Core</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Core')} >Core</S.NavigationLink>} */}
                         {type ? <S.NavigationLink href="/#company">Company</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Company')} >Company</S.NavigationLink>}
                         {type ? <S.NavigationLink href="/#partners">Partners</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Partners')} >Partners</S.NavigationLink>}
                         {type ? <S.NavigationLink href="/#news">News</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('News')} >News</S.NavigationLink>}
