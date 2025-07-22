@@ -101,21 +101,21 @@ function PathDrillingMob() {
             </S.Union>
             <S.PathDrilling 
                 width="2" 
-                height="5628" 
-                viewBox="0 0 2 5628" 
+                height="5228" 
+                viewBox="0 0 2 5228" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path 
                     ref={pathRef}
-                    d="M1 0.5L1 1588.5L1 2268.5L1 3960L1 4445L1 5628" 
+                    d="M1 0.5L1 1588.5L1 2268.5L1 3960L1 4445L1 5228" 
                     stroke="#6D6D6D" 
                     strokeWidth="1.5" 
                     strokeDasharray="3 3" 
                 />
                 <path 
                     ref={filledPathRef}
-                    d="M1 0.5L1 1588.5L1 2268.5L1 3960L1 4445L1 5628" 
+                    d="M1 0.5L1 1588.5L1 2268.5L1 3960L1 4445L1 5228" 
                     stroke="#31ED37"
                     strokeWidth="1.5" 
                 />

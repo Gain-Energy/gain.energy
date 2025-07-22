@@ -5,11 +5,14 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import * as S from './style';
 import Shadow from '../Shadow/Shadow';
 import chipImg from '../../img/chip.png';
+import { useMediaQuery } from "react-responsive";
 // import backgroundImg from '../../img/chip.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
 function IntelegentCoreSection({name}) {
+    const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
+
     const scrollToRef = useRef(null)
     const contentRef = useRef(null)
 
@@ -76,10 +79,17 @@ function IntelegentCoreSection({name}) {
                     </S.Logo>
                     <S.Headline>Intelligent Core</S.Headline>
                 </S.LeftContent>
+                <S.Line/>
                 <S.RightContent>
-                    <S.RightHeader>
-                        Key Technical <br />Characteristics
-                    </S.RightHeader>
+                    {isMobile ? 
+                        <S.RightHeader>
+                            Key Technical Characteristics
+                        </S.RightHeader>
+                    :
+                        <S.RightHeader>
+                            Key Technical <br/>Characteristics
+                        </S.RightHeader>    
+                    }
                     <S.AdvantagesList>
                         <li>Intuitive web-based SaaS cloud-agnostic application</li>
                         <li>Automated data synchronization across various data sources (manual file upload, corporate SQL database, WITSML, Google Drive, One Drive, Sharepoint)</li>

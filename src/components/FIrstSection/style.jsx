@@ -68,13 +68,13 @@ export const Content = styled.div`
         max-width: 600px;
         padding-top: 169px;
         margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
         justify-content: space-between;
     }
 
     @media (max-width: 480px) {
-        padding-top: 235px;
+        padding-top: 188px;
         flex-direction: column;
     }
 `
@@ -130,6 +130,18 @@ export const BottomContent = styled.div`
     margin-top: 60px;
     gap: 250px;
     flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+        margin-top: 30px;
+        gap: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 480px) {
+        position: relative;
+        gap: 30px;
+    }
 `
 
 export const ContentLogo = styled.svg`
@@ -162,8 +174,20 @@ export const Button = styled.button`
     text-transform: uppercase;
 
     @media (max-width: 1024px) {
-        width: 70px;
-        height: 32px;
+        width: 150px;
+        height: 44px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 105%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        position: absolute;
+        bottom: -72px;
+        width: 100%;
+        height: 44px;   
     }
 
     ::before {
@@ -200,12 +224,10 @@ export const ContentRight = styled.div`
     gap: 20px;
 
     @media (max-width: 1024px) {
-        padding-top: 89px;
         gap: 15px;
     }
 
     @media (max-width: 480px) {
-        padding-top: 40px;
         gap: 10px;
     }
 `
@@ -259,14 +281,14 @@ export const Arrow = styled.svg`
     @media (max-width: 1024px) {
         width: 7px;
         height: 10px;
-        top: 95px;
+        top: 4px;
         left: -20px;
     }
 
     @media (max-width: 480px) {
         width: 7px;
         height: 10px;
-        top: 44px;
+        top: 4px;
         left: -18px;
     }
 `

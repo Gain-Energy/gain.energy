@@ -127,6 +127,7 @@ export const BigText = styled.p`
     }
 
     @media (max-width: 480px) {
+        height: 0;
         padding-top: 0;
         width: 300px;
         font-size: 14px;
@@ -239,12 +240,43 @@ export const FeaturesMobileBlock = styled.div`
 `
 
 export const FeaturesMobileCard = styled.div`
+    position: relative;
     max-width: 230px;
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     overflow: visible !important;
+
+    ::after {
+        content: "";
+        position: absolute;
+        opacity: ${({ isActive }) => 
+            (isActive ? '1' : '0')};
+        top: 15px;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border: 2px solid var(--us_fill-green); 
+        border-bottom: none;
+        border-left: none;
+        transition: all .3s ease;
+    }
+
+    ::before {
+        content: "";
+        position: absolute;
+        opacity: ${({ isActive }) => 
+            (isActive ? '1' : '0')};
+        bottom: -10px;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border: 2px solid var(--us_fill-green);
+        border-top: none;
+        border-left: none;
+        transition: all .3s ease;
+    }
 
     &.keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide  {
         overflow: visible;
@@ -275,35 +307,11 @@ export const MobileText = styled.p`
     line-height: 120%;
     transition: all .3s ease;
 
-    ::after {
-        content: "";
-        position: absolute;
-        opacity: ${({ isActive }) => 
-            (isActive ? '1' : '0')};
-        top: -10px;
-        right: 0;
-        width: 10px;
-        height: 10px;
-        border: 2px solid var(--us_fill-green); 
-        border-bottom: none;
-        border-left: none;
-        transition: all .3s ease;
-    }
-
-    ::before {
-        content: "";
-        position: absolute;
-        opacity: ${({ isActive }) => 
-            (isActive ? '1' : '0')};
-        bottom: -10px;
-        right: 0;
-        width: 10px;
-        height: 10px;
-        border: 2px solid var(--us_fill-green);
-        border-top: none;
-        border-left: none;
-        transition: all .3s ease;
-    }
+    display: -webkit-box;      
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 5;      
+    overflow: hidden;          
+    text-overflow: ellipsis;  
 `
 
 export const FeaturesContent = styled.div`
@@ -378,6 +386,17 @@ export const FeaturesContent = styled.div`
 export const FeaturesImage = styled.img`
     width: 425px;
     height: 259px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 155px;
+    }
+
+    @media (max-width: 480px) { 
+        margin-top: 10px;
+        width: 100%;
+        height: 140px;
+    }
 `
 
 export const FeaturesText = styled.p`
@@ -426,8 +445,13 @@ export const FeaturesButton = styled.button`
     text-transform: uppercase;
 
     @media (max-width: 1024px) {
-        width: 70px;
+        width: 120px;
         height: 32px;
+    }
+
+    @media (max-width: 480px) {
+        width: 129px;
+        height: 44px;
     }
 
     ::before {
@@ -441,6 +465,14 @@ export const FeaturesButton = styled.button`
         background: linear-gradient(to right, #1BD2A3 0%, #39FF3F 100%);
         transition: opacity 0.3s ease;
         z-index: 1;
+
+        @media (max-width: 1024px) {
+            padding: 10px 0;
+        }
+
+        @media (max-width: 480px) {
+            padding: 15px 0;
+        }
     }
 
     :hover::before {

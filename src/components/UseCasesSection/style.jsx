@@ -166,6 +166,10 @@ export const CasesLeft = styled.div`
     @media (max-width: 1024px) {
         width: 200px;
         gap: 10px;
+
+        div:last-of-type {
+            margin-top: 15px;
+        }
     }
 
     @media (max-width: 480px) { 
@@ -213,7 +217,7 @@ export const Case = styled.div`
 
     @media (max-width: 480px) { 
         padding: ${({ position }) =>
-            position === 'right' ? '15px 0 7px 7px' : '15px 7px 7px 0'};
+            position === 'right' ? '20px 0 7px 7px' : '20px 7px 7px 0'};
         width: 133px;
         font-size: 11px;
         font-style: normal;
@@ -254,6 +258,14 @@ export const Case = styled.div`
             position === 'right' ? 'auto' : '5px'};
             left: ${({ position }) =>
                 position === 'left' ? 'auto' : '5px'};
+        }
+
+        @media (max-width: 480px) { 
+            bottom: 0;
+            right: ${({ position }) =>
+            position === 'right' ? 'auto' : '0'};
+            left: ${({ position }) =>
+                position === 'left' ? 'auto' : '0'};
         }
     }
 `

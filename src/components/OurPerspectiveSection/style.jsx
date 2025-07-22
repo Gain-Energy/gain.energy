@@ -74,7 +74,6 @@ export const ContentHeader = styled.h2`
     }
 
     @media (max-width: 1024px) {
-        width: 170px;
         font-size: 26px;
         font-style: normal;
         font-weight: 300;

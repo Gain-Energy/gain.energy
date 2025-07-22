@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import backgroundImg from '../../img/oil-layer-5.png'
+import backgroundImg from '../../img/oil-layer-4.png'
 
 export const DrillingEngineeringSection = styled.section`
     position: relative;
@@ -20,14 +20,14 @@ export const DrillingEngineeringSection = styled.section`
 
     @media (max-width: 1024px) {
         padding-top: 0;
+        padding-bottom: 200px;
     }
 
     @media (max-width: 480px) {
         padding-top: 45px;
+        padding-bottom: 235px;
     }
 `
-
-
 
 export const Content = styled.div`
     position: relative;
@@ -42,10 +42,14 @@ export const Content = styled.div`
         max-width: 600px; 
         padding: 0 20px;
         height: 445px;
+        gap: 100px;
     }
 
     @media (max-width: 480px) {
+        gap: 10px;
         height: 626px;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 `
 
@@ -105,12 +109,13 @@ export const PathBlock = styled.div`
     gap: 78px;
 
     @media (max-width: 1024px) {
+        top: 135px;
         padding-left: 85px;
         gap: 30px;
     }
 
     @media (max-width: 480px) {
-        top: 129px;
+        top: 160px;
         padding-left: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -314,4 +319,16 @@ export const Text = styled.p`
     font-size: 22px;
     line-height: 130%;
     color: var(--us_fill-white);
+
+    @media (max-width: 1024px) {
+        width: 300px;
+        font-size: 12px;  
+    }
+
+    @media (max-width: 480px) {
+        width: 300px;
+        font-weight: 400;
+        font-size: 10px;    
+        line-height: 130%;
+    }
 `

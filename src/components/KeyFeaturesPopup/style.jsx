@@ -47,6 +47,20 @@ export const Inner = styled(ZoneBase)`
     z-index: 999;
     display: flex;
     gap: 30px;
+
+    @media (max-width: 1024px) { 
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        max-width: 480px;
+        height: 628px;
+        gap: 20px;
+    }
+
+    @media (max-width: 480px) { 
+        width: 326px;
+        height: 625px;
+        gap: 15px;
+    }
 `
 
 export const InnerLeft = styled.div`
@@ -55,6 +69,15 @@ export const InnerLeft = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     padding: 95px 0 30px 30px;
+
+    @media (max-width: 1024px) { 
+        padding: 0 20px 20px 20px;
+        height: 100%;
+    }
+
+    @media (max-width: 480px) { 
+        padding: 0 15px 15px 15px;
+    }
 `
 
 export const InnerRight = styled.div`
@@ -63,6 +86,15 @@ export const InnerRight = styled.div`
     align-items: flex-end;
     gap: 20px;
     padding: 30px 30px 30px 0;
+
+    @media (max-width: 1024px) { 
+        padding: 15px 20px 0 20px;
+    }
+
+    @media (max-width: 480px) { 
+        padding: 15px 15px 0 15px;
+        gap: 5px;
+    }
 `
 
 export const Text = styled.p`
@@ -71,14 +103,21 @@ export const Text = styled.p`
     font-size: 18px;
     line-height: 150%;
     color: var(--us_fill-white);
+
+    @media (max-width: 1024px) {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 120%;
+    }
 `
 
 export const Navigation = styled.div`
     display: flex;
     gap: 10px;
 
-    @media (max-width: 480px) {
-        display: none;
+    @media (max-width: 1024px) {
+        width: 100%;
+        justify-content: space-between;
     }
 `
 
@@ -96,8 +135,13 @@ export const LeftButton = styled.button`
     transition: background-color 0.3s ease;
 
     @media (max-width: 1024px) {
-        width: 70px;
-        height: 32px;
+        width: 128px;
+        height: 44px;
+
+        svg {
+            width: 12px;
+            height: 17px;
+        }
     }
 
     ::before {
@@ -148,8 +192,13 @@ export const RightButton = styled.button`
     transition: background-color 0.3s ease;
 
     @media (max-width: 1024px) {
-        width: 70px;
-        height: 32px;
+        width: 128px;
+        height: 44px;
+
+        svg {
+            width: 12px;
+            height: 17px;
+        }
     }
 
     ::before {
@@ -193,24 +242,74 @@ export const Heading = styled.h4`
     line-height: 120%;
     text-align: right;
     color: var(--us_fill-green);
+
+    @media (max-width: 1024px) {
+        width: 230px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 110%;
+        text-align: right;
+    }
+
+    @media (max-width: 480px) {
+        
+    }
 ` 
 
-export const Image = styled.img`
+export const ImageWrapper = styled.div`
     width: 780px;
     height: 439px;
+
+    @media (max-width: 1024px) {
+        width: 440px;
+        height: 248px;
+    }
+
+    @media (max-width: 480px) {
+        width: 300px;
+        height: 169px;
+    }
+`
+
+export const Image = styled.img`
+    width: 100%;
+    height: auto;
     margin-top: 2px;
+
+    @media (max-width: 1024px) {
+        margin-top: 10px;
+    }
 `
 
 export const ImagePreviewBlock = styled.div`
     display: flex;
     gap: 10px;
+    margin-top: auto;
+
+    @media (max-width: 1024px) {
+        overflow: scroll;
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 15px;
+        width: 100%;
+        gap: 5px;
+    }
 `
 
 export const ImagePreview = styled.img`
     cursor: pointer;
     width: 77px;
-    height: 44px;opacity: ${({ isActive }) => 
-        (isActive ? '1' : '0.3')};
+    height: 44px;
+    opacity: ${({ isActive }) => 
+        (isActive ? '1' : '0.3')}
+    ;
+
+    @media (max-width: 1024px) {
+        width: 53px;
+        height: 30px;
+    }
 `
 
 export const Outer = styled(ZoneBase)`
@@ -220,4 +319,14 @@ export const Outer = styled(ZoneBase)`
     clip-path: url(#outer);
     background-size: cover;
     z-index: 998;
+
+    @media (max-width: 1024px) { 
+        max-width: 484px;
+        height: 632px;
+    }
+
+    @media (max-width: 480px) { 
+        width: 330px;
+        height: 629px;
+    }
 `

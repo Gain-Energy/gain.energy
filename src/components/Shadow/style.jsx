@@ -11,4 +11,8 @@ export const Wrapper = styled.div`
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
     transform: ${({transform}) => (transform ? "rotate(180deg)" : "rotate(0deg)")};
+
+    @media (max-width: 480px) {
+        z-index: -1;
+    }
 `

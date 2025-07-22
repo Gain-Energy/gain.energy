@@ -33,7 +33,7 @@ export const PartnersBlock = styled.div`
     @media (max-width: 1024px) {
         max-width: 600px;
         justify-content: space-between;
-        gap: 30px;
+        gap: 240px;
         padding: 0 30px 30px 30px;
     }
 
@@ -71,10 +71,14 @@ export const PartnersShowcase = styled.div`
     }
 
     @media (max-width: 1024px) {
-        gap: 13px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 40px;
     }
 
     @media (max-width: 480px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 33px;
     }
 `

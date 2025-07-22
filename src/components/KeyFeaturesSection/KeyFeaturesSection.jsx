@@ -7,6 +7,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import KeyFeaturesPopup from '../KeyFeaturesPopup/KeyFeaturesPopup';
 import * as S from './style';
+import { useMediaQuery } from "react-responsive";
 
 import featuresTexts from '../../data/featuresTexts';
 
@@ -24,6 +25,9 @@ function KeyFeaturesSection({ name }) {
     const topRef = useRef(null)
     const featuresRef = useRef(null)
     const {popupOpen ,togglePopup} = usePopup()
+
+    const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
+    const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
 
     const [currentSlide, setCurrentSlide] = useState(0)
     const [sliderRef] = useKeenSlider({
@@ -98,15 +102,15 @@ function KeyFeaturesSection({ name }) {
                     const triggers = featuresTexts.map((item, index) => {
                         return ScrollTrigger.create({
                             trigger: `#features-item-${item.id}`,
-                            start: 'top-=10px center',
-                            end: 'bottom+=40px center',
+                            start: isTablet ? 'top center' : isMobile ? 'top-=10px center' : 'top-=10px center',
+                            end: isTablet ? 'bottom center' : isMobile ? 'bottom+=40px center' : 'bottom+=40px center',
                             key: index,
                             // markers: true,
                             onEnter: () => {
-                                handleFeatureEnter(item.id, item.top, item.text, item.imageSrc, item.header)
+                                handleFeatureEnter(item.id, item.top, item.text, item.imageSrc[0], item.header)
                             },
                             onEnterBack: () => {
-                                handleFeatureEnter(item.id, item.top, item.text, item.imageSrc, item.header)
+                                handleFeatureEnter(item.id, item.top, item.text, item.imageSrc[0], item.header)
                             },
                             onLeave: () => {
                                 if (index === featuresTexts.length - 1) {
@@ -130,7 +134,7 @@ function KeyFeaturesSection({ name }) {
             }
 
         )
-    }, [name, registerSection])
+    }, [isMobile, isTablet, name, registerSection])
 
     const handleFeatureEnter = (featureId, newPosition, newText, newImg, newHeading) => {
         gsap.to(textRef.current, {
@@ -225,9 +229,12 @@ function KeyFeaturesSection({ name }) {
                             key={index}
                             className="keen-slider__slide"
                             isActive={index === currentSlide}
+                            onClick={() => selectActiveFeature(item.id)}
                         >
                             <S.FeaturesHeading>{item.header}</S.FeaturesHeading>
+                            <S.FeaturesImage src={item.imageSrc[0]}/>
                             <S.MobileText isActive={index === currentSlide} >{item.text}</S.MobileText>
+                            <S.FeaturesButton>Read more</S.FeaturesButton>
                         </S.FeaturesMobileCard>
                     ))}
                 </S.FeaturesMobileBlock>

@@ -25,12 +25,12 @@ export const CounterContainer = styled.div`
     pointer-events: none;
 
     @media (max-width: 1024px) {
-        height: 5700px;
+        height: 4380px;
         top: 440px;
     }
 
     @media (max-width: 480px) {
-        height: 5646px;
+        height: 5235px;
         top: 582px;
     }
 `

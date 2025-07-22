@@ -125,9 +125,9 @@ function PathDrilling() {
                     strokeWidth="1.5"
                 />
             </S.PathDrilling>
-            {/* <S.DrillingFinish>
+            <S.DrillingFinish>
                 Target Depth
-            </S.DrillingFinish> */}
+            </S.DrillingFinish>
         </S.PathDrillingContainer>
     );
 }

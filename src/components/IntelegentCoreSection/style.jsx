@@ -15,6 +15,10 @@ export const IntelegentCoreSection = styled.section`
         background: url(${backgroundImg});
         background-size: cover;
         z-index: 0;
+
+        @media (max-width: 1024px) {
+            left: 0;
+        }
     }
 
     ::after {
@@ -30,6 +34,10 @@ export const IntelegentCoreSection = styled.section`
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
         z-index: 0;
+
+        @media (max-width: 1024px) {
+            z-index: -1;
+        }
     }
 `
 
@@ -43,15 +51,15 @@ export const Content = styled.div`
 
     @media (max-width: 1024px) {
         max-width: 600px; 
-        padding: 50px 20px 0 20px;
-        gap: 0;
+        padding: 50px 20px 80px 20px;
+        gap: 200px;
         justify-content: space-between;
     }
 
     @media (max-width: 480px) {
         padding: 100px 30px 45px 30px;
         flex-direction: column;
-        gap: 0;
+        gap: 30px;
     }
 `
 
@@ -60,6 +68,21 @@ export const LeftContent = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media (max-width: 480px) {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+`
+
+export const Line = styled.span`
+    display: none;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(67deg, #0af 0%, #1dd59f 50%, #39ff3f 100%);
+    }
 `
 
 export const RightContent = styled.div`
@@ -67,6 +90,10 @@ export const RightContent = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 30px 29px;
+
+    @media (max-width: 480px) {
+        gap: 15px;
+    }
 `
 
 export const Logo = styled.svg`
@@ -129,6 +156,16 @@ export const RightHeader = styled.p`
     font-size: 28px;
     line-height: 110%;
     color: var(--us_fill-green);
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 110%;
+    }
 `
 
 export const AdvantagesList = styled.ul`
@@ -160,7 +197,16 @@ export const AdvantagesList = styled.ul`
     }
 
     @media (max-width: 1024px) {
-        width: 260px;
+        width: 205px;
+        gap: 10px;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; 
+    }
+
+    @media (max-width: 480px) {
+        width: 297px;
         gap: 10px;
         font-size: 10px;
         font-style: normal;
@@ -189,7 +235,7 @@ export const BigText = styled.p`
 
     @media (max-width: 480px) {
         position: static;
-        padding-top: 20px;
+        padding-top: 15px;
         width: 300px;
         font-size: 14px;
         font-style: normal;
@@ -205,4 +251,17 @@ export const ChipImg = styled.img`
     width: 431px;
     height: 377px;
     z-index: -1;
+
+    @media (max-width: 1024px) {
+        top: 80px;
+        left: -490px;
+    }
+    
+
+    @media (max-width: 480px) {
+        width: 160px;
+        height: 140px;
+        top: -180px;
+        right: 50px;
+    }
 `
