@@ -4,8 +4,20 @@ import news3 from '../img/news-3.jpg';
 import news4 from '../img/news-4.jpg';
 import news5 from '../img/news-5.png';
 import news6 from '../img/news-6.jpg';
+import news7 from '../img/news-7.jpg';
+import news8 from '../img/news-8.png';
 
 const news = [
+    {
+        imageSrc: news8,
+        date: '7 August 2025',
+        text: 'Gain.Energy is proud to announce the partnership with the University of Sydney to address the perennial  problem of Oil and Gas data quality, though Agentic AI. Teaming up with a group of 7 postgrad data scientists, we are embarking on the development of a 𝗗𝗮𝘁𝗮 𝗤𝗔/𝗤𝗖 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁, paving the way for enhanced data reliability and integrity.'
+    },
+    {
+        imageSrc: news7,
+        date: '1 June 2025',
+        text: 'Gain.Energy proudly announced a partnership with the Heriot-Watt University to develop custom-made AI Agents to address specific use cases. The first one to be built is a Drilling Rig Selection AI Agent that will optimize the process of identifying the best-suited rig and significantly reduce cost.'
+    },
     {
         imageSrc: news6,
         date: '23 April 2025',

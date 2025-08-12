@@ -127,20 +127,22 @@ export const ContentHeader = styled.h1`
 
 export const BottomContent = styled.div`    
     display: flex;
-    margin-top: 60px;
+    justify-content: space-between;
+    margin-top: 40px;
     gap: 250px;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
 
     @media (max-width: 1024px) {
         margin-top: 30px;
-        gap: 0;
+        gap: 140px;
         width: 100%;
         justify-content: space-between;
     }
 
     @media (max-width: 480px) {
         position: relative;
-        gap: 30px;
+        gap: 0px;
+        flex-wrap: wrap;
     }
 `
 
@@ -185,7 +187,7 @@ export const Button = styled.button`
 
     @media (max-width: 480px) {
         position: absolute;
-        bottom: -72px;
+        bottom: -52px;
         width: 100%;
         height: 44px;   
     }
@@ -221,19 +223,19 @@ export const ContentRight = styled.div`
     display: flex;
     flex-direction: column;
     z-index: 1;
-    gap: 20px;
+    gap: 12px;
 
     @media (max-width: 1024px) {
-        gap: 15px;
+        gap: 4px;
     }
 
     @media (max-width: 480px) {
-        gap: 10px;
+        gap: 2px;
     }
 `
 
 export const ContentRightHeader = styled.h3`
-    width: 534px;
+    width: 600px;
     color: var(--us_fill-white);
     font-family: "JetBrains Mono";
     font-size: 24px;
@@ -243,16 +245,20 @@ export const ContentRightHeader = styled.h3`
     text-transform: uppercase;
 
     @media (max-width: 1024px) {
-        width: 300px;
+        width: 400px;
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
         line-height: 130%;
     }
+    
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 `
 
 export const ContentRightText = styled.p`
-    width: 446px;
+    width: 620px;
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
@@ -263,11 +269,15 @@ export const ContentRightText = styled.p`
     line-height: 130%; 
 
     @media (max-width: 1024px) {
-        width: 300px;
+        width: 400px;
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%;
+    }
+    
+    @media (max-width: 480px) {
+        width: 100%;
     }
 `
 

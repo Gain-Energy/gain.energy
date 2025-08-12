@@ -63,7 +63,7 @@ export const PartnersHeadline = styled.h2`
 
 export const PartnersShowcase = styled.div`
     display: flex;
-    gap: 80px;
+    gap: 20px;
 
     img {
         width: 114px;
