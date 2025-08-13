@@ -122,15 +122,12 @@ function FirstSection() {
                         <S.ContentRightHeader>
                             Transform Your Engineering Workflows with Industry-Specific AI
                         </S.ContentRightHeader>
-                        <div style={{ width: "100%", display: 'flex', flexDirection: "column", gap: 2 }}>
+                        <div style={{ width: "100%", display: 'flex', flexDirection: "column", gap: 20 }}>
                             <S.ContentRightText>
                                 {`Global O&G industry loses about $20 bln every year due to inefficiencies and outdated practices. AI has the potential to reduce this by 30-40%.`}
                             </S.ContentRightText>
-                            <S.ContentRightText>
-                                {`Our solution - specialized micro-AI Agents, laser-focused on streamlining processes, boosting accuracy, connecting the dots, and enabling better decisions faster.`}
-                            </S.ContentRightText>
                             <S.ContentRightText style={{ fontWeight: 700 }}>
-                                {`Our Offering - Micro-Agents with Macro-Impact on Productivity and Performance.`}
+                                {`Our Solution - Micro-AI Agents with Macro-Impact on Productivity, Accuracy and Performance.`}
                             </S.ContentRightText>
                         </div>
                         <S.Arrow xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">

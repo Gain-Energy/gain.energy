@@ -128,7 +128,7 @@ export const ContentHeader = styled.h1`
 export const BottomContent = styled.div`    
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 64px;
     gap: 250px;
     flex-wrap: no-wrap;
 
@@ -223,7 +223,7 @@ export const ContentRight = styled.div`
     display: flex;
     flex-direction: column;
     z-index: 1;
-    gap: 12px;
+    gap: 24px;
 
     @media (max-width: 1024px) {
         gap: 4px;
