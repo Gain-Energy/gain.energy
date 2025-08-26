@@ -131,6 +131,7 @@ function OurPerspectiveSection({ name }) {
                                 muted={muted}
                                 controls={true}
                                 playsinline={true}
+                                preload='auto'
                                 width="100%"
                                 height="100%"
                                 style={{ objectFit: 'cover' }}
