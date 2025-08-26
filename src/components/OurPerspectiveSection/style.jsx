@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import backgroundImg from '../../img/sea-oil-derrick.jpg'
 
 export const OurPerspectiveSection = styled.section`
     position: relative;
@@ -84,9 +83,17 @@ export const ContentHeader = styled.h2`
 export const Img = styled.div`
     position: relative;
     width: 501px;
-    height: 360px;
-    background: url(${backgroundImg});
-    background-size: cover;
+    height: 282px;
+    overflow: hidden;
+    aspect-ratio: 1920/1080;
+    
+    video {
+        width: 100%;
+        position: absolute;
+        aspect-ratio: 1920/1080;
+        top: 0;
+        left: 0;
+    }
 
     @media (max-width: 1024px) {
         width: 100%;
@@ -96,6 +103,124 @@ export const Img = styled.div`
     @media (max-width: 480px) {
         width: 100%;
         height: 273px;
+    }
+`
+
+export const PlayButton = styled.button`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--us_fill-green);
+    border-radius: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    z-index: 15;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.9);
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+        padding: 10px 15px;
+        gap: 5px;
+    }
+`
+
+export const PlayIcon = styled.span`
+    color: var(--us_fill-green);
+    font-size: 24px;
+    font-weight: bold;
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+    }
+`
+
+export const PlayText = styled.span`
+    color: var(--us_fill-white);
+    font-family: "JetBrains Mono";
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+
+    @media (max-width: 480px) {
+        font-size: 10px;
+    }
+`
+
+export const PreviewOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a4a72 0%, #2d5aa0 30%, #4472b8 60%, #5b8dd1 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: opacity 0.5s ease;
+
+    &.fade-out {
+        opacity: 0;
+    }
+`
+
+export const PreviewLogo = styled.div`
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--us_fill-white);
+    font-family: "PP Nikkei Pacific";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+    @media (max-width: 1024px) {
+        top: 15px;
+        right: 15px;
+        font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+        top: 10px;
+        right: 10px;
+        font-size: 10px;
+    }
+`
+
+export const PreviewTitle = styled.h3`
+    color: var(--us_fill-white);
+    font-family: "PP Nikkei Pacific";
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 80%;
+
+    span {
+        color: var(--us_fill-green);
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        max-width: 90%;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+        max-width: 95%;
     }
 `
 
