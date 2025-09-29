@@ -22,6 +22,7 @@ import DrillingEngineeringSection from "../../components/DrillingEngineeringSect
 import CompanySection from "../../components/CompanySection/CompanySection";
 import PartnersAndNewsSection from "../../components/PartnersAndNewsSection/PartnersAndNewsSection";
 import Footer from "../../components/Footer/Footer";
+import SEOContent from "../../components/SEOContent/SEOContent";
 
 function HomePage() {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
@@ -58,6 +59,7 @@ function HomePage() {
             <DrillingEngineeringSection />
             <CompanySection name={'Company'} />
             <PartnersAndNewsSection />
+            <SEOContent />
             <Footer name={'Contacts'} />
           </Lenis>
         </PopupProvider>

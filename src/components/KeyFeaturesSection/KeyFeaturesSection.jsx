@@ -232,14 +232,14 @@ function KeyFeaturesSection({ name }) {
                             onClick={() => selectActiveFeature(item.id)}
                         >
                             <S.FeaturesHeading>{item.header}</S.FeaturesHeading>
-                            <S.FeaturesImage src={item.imageSrc[0]}/>
+                            <S.FeaturesImage src={item.imageSrc[0]} alt={`${item.header} - AI feature for oil and gas engineers`}/>
                             <S.MobileText isActive={index === currentSlide} >{item.text}</S.MobileText>
                             <S.FeaturesButton>Read more</S.FeaturesButton>
                         </S.FeaturesMobileCard>
                     ))}
                 </S.FeaturesMobileBlock>
                 <S.FeaturesContent ref={textRef} textPosition={textPosition} onClick={() => selectActiveFeature(activeId)}>
-                    <S.FeaturesImage src={img}/>
+                    <S.FeaturesImage src={img} alt={`${activeId ? featuresTexts.find(item => item.id === activeId)?.header || 'AI Feature' : 'AI Feature'} - AI feature for petroleum engineering workflows`}/>
                     <S.FeaturesText>{text}</S.FeaturesText>
                     <S.FeaturesButton>Read more</S.FeaturesButton>
                 </S.FeaturesContent>

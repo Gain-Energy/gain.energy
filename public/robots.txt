@@ -1,3 +1,13 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /build/
+
+# Sitemap
+Sitemap: https://gain.energy/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1

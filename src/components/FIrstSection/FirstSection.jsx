@@ -101,7 +101,7 @@ function FirstSection() {
                 <FirstGradient />
                 <SecondGradient />
                 <S.ContentHeader>
-                    Specialized Oil and Gas Marketplace of Data-Driven and Task-Specific AI Agents
+                    Leading AI for Oil and Gas: Specialized Marketplace of Data-Driven AI Agents for Petroleum Engineers
                 </S.ContentHeader>
                 <S.BottomContent>
                     <S.ContentLeft>
@@ -124,10 +124,10 @@ function FirstSection() {
                         </S.ContentRightHeader>
                         <div style={{ width: "100%", display: 'flex', flexDirection: "column", gap: 20 }}>
                             <S.ContentRightText>
-                                {`Global O&G industry loses about $20 bln every year due to inefficiencies and outdated practices. AI has the potential to reduce this by 30-40%.`}
+                                {`The global oil and gas industry loses about $20 billion annually due to inefficiencies and outdated practices. Our AI for oil and gas solutions can reduce these losses by 30-40%.`}
                             </S.ContentRightText>
                             <S.ContentRightText style={{ fontWeight: 700 }}>
-                                {`Our Solution - Micro-AI Agents with Macro-Impact on Productivity, Accuracy and Performance.`}
+                                {`Our Solution: Specialized petroleum AI agents delivering macro-impact on drilling productivity, operational accuracy, and overall performance.`}
                             </S.ContentRightText>
                         </div>
                         <S.Arrow xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">

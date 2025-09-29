@@ -102,7 +102,7 @@ function IntelegentCoreSection({name}) {
                     <S.BigText>
                         Affordable, accessible, and practical AI delivering tangible results today while remaining scalable for tomorrow.
                     </S.BigText>
-                    <S.ChipImg src={chipImg} alt='chip'/>
+                    <S.ChipImg src={chipImg} alt='AI chip technology for oil and gas industry - UPSTRIMA petroleum AI platform'/>
                 </S.RightContent>
             </S.Content>
         </S.IntelegentCoreSection>
