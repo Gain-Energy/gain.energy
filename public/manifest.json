@@ -1,6 +1,7 @@
 {
   "short_name": "UPSTRIMA",
-  "name": "Your first AI Assistant for Oil and Gas Engineers",
+  "name": "UPSTRIMA - AI for Oil and Gas Engineers | Petroleum AI Platform",
+  "description": "Leading AI platform for oil and gas engineers. Specialized AI agents, drilling automation, and petroleum data analytics for the energy industry.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,5 +17,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en"
 }
