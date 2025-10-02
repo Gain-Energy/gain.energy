@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <!-- Homepage -->
   <url>
     <loc>https://gain.energy/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://gain.energy/up_cover.png</image:loc>
+      <image:title>UPSTRIMA - AI Platform for Oil and Gas Engineers</image:title>
+      <image:caption>Leading AI platform for petroleum engineering and oil and gas operations</image:caption>
+    </image:image>
   </url>
   
   <!-- Privacy Page -->
   <url>
     <loc>https://gain.energy/privacy</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  
+  <!-- Add more pages as you create them -->
+  <!-- Blog/Resources pages should go here -->
   
 </urlset>
