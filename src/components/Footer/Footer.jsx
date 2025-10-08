@@ -12,9 +12,16 @@ function Footer({ name, type }) {
         registerSection(name, scrollToRef)
     }, [name, registerSection])
 
+    const handleClick = (sectionName) => {
+        scrollToSection(sectionName);
+        // Update URL hash without triggering a scroll
+        const formattedName = sectionName.toLowerCase();
+        window.history.pushState(null, '', `#${formattedName}`);
+    }
+
     return (
         <S.Footer ref={scrollToRef} id="contacts">
-            <S.FooterGradient src={gradient} />
+            <S.FooterGradient src={gradient} alt="" aria-hidden="true" />
             <S.Content>
                 <S.ContactUsBlock>
                     <S.ContactUsHeadline>Contact Us</S.ContactUsHeadline>
@@ -35,14 +42,14 @@ function Footer({ name, type }) {
                     </S.LinkItemsBlock>
                     <S.NavigationHeadline>Navigate</S.NavigationHeadline>
                     <S.NavigationList>
-                        {type ? <S.NavigationLink href='/#perspective'>Perspective</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Perspective')}>Perspective</S.NavigationLink>}
-                        {type ? <S.NavigationLink href='/#features'>Features</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Features')} >Features</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#cases">Cases</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Cases')}>Cases</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#products">Products</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Products')} >Products</S.NavigationLink>}
-                        {/* {type ? <S.NavigationLink href="/#core">Core</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Core')} >Core</S.NavigationLink>} */}
-                        {type ? <S.NavigationLink href="/#company">Company</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Company')} >Company</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#partners">Partners</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('Partners')} >Partners</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#news">News</S.NavigationLink> : <S.NavigationLink onClick={() => scrollToSection('News')} >News</S.NavigationLink>}
+                        {type ? <S.NavigationLink href='/#perspective'>Perspective</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Perspective')}>Perspective</S.NavigationLink>}
+                        {type ? <S.NavigationLink href='/#features'>Features</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Features')} >Features</S.NavigationLink>}
+                        {type ? <S.NavigationLink href="/#cases">Cases</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Cases')}>Cases</S.NavigationLink>}
+                        {type ? <S.NavigationLink href="/#products">Products</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Products')} >Products</S.NavigationLink>}
+                        {/* {type ? <S.NavigationLink href="/#core">Core</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Core')} >Core</S.NavigationLink>} */}
+                        {type ? <S.NavigationLink href="/#company">Company</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Company')} >Company</S.NavigationLink>}
+                        {type ? <S.NavigationLink href="/#partners">Partners</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Partners')} >Partners</S.NavigationLink>}
+                        {type ? <S.NavigationLink href="/#news">News</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('News')} >News</S.NavigationLink>}
                         <S.NavigationLink href="/privacy">Privacy and Policy</S.NavigationLink>
                     </S.NavigationList>
                 </S.NavigationBlock>
