@@ -53,13 +53,14 @@ function SEOContent() {
                         operational needs in the oil and gas sector.
                     </S.SEOText>
                     
-                    <S.SEOHeading>The Leading AI Platform for Oil and Gas Industry</S.SEOHeading>
+                    <S.SEOHeading>The Leading AI for Oil and Gas | AI Platform for Energy Operations</S.SEOHeading>
                     <S.SEOText>
-                        As artificial intelligence reshapes the energy sector, UPSTRIMA leads the way in oil and gas AI innovation. 
-                        Our solutions combine advanced machine learning, deep learning, and predictive analytics to deliver 
+                        As the premier AI for oil and gas operations, UPSTRIMA leads the way in energy sector innovation. 
+                        Our AI platform combines advanced machine learning, deep learning, and predictive analytics to deliver 
                         unprecedented operational insights. Whether you need drilling optimization, production enhancement, or 
-                        operational efficiency, UPSTRIMA provides the most advanced AI technology for the modern oil and gas 
-                        industry. Join the leaders in energy innovation with UPSTRIMA's AI platform.
+                        operational efficiency, UPSTRIMA provides the most comprehensive AI for oil and gas operations. As both an 
+                        AI platform and specialized solution provider for the oil and gas industry, we deliver unmatched value 
+                        to energy companies worldwide.
                     </S.SEOText>
                 </S.ContentWrapper>
             </S.VisibleContent>
