@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import backgroundImg from '../../img/man-at-work.jpg'
+const backgroundImg = '/man-at-work.webp'
 
 export const FirstSection = styled.section`
     position: relative;
