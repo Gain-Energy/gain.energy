@@ -205,7 +205,7 @@ export const FeaturesList = styled.div`
     }
 `
 
-export const FeaturesItem = styled.span`
+export const FeaturesItem = styled.h2`
     cursor: pointer;
     color: ${({isActive}) => (isActive ? 'var(--us_fill-green)' : 'var(--us_fill-white)')};
     text-align: right;
@@ -284,7 +284,7 @@ export const FeaturesMobileCard = styled.div`
     }
 `
 
-export const FeaturesHeading = styled.h4`
+export const FeaturesHeading = styled.h2`
     width: 230px;
     color: var(--us_fill-green);
     font-family: "PP Nikkei Pacific";

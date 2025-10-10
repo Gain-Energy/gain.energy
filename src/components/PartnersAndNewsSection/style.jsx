@@ -360,7 +360,7 @@ export const NewsItemImg = styled.img`
     transition: all .3s ease;
 `
 
-export const NewsItemHeadline = styled.h4`
+export const NewsItemHeadline = styled.h3`
     color: var(--us_fill-green);
     font-family: "PP Nikkei Pacific";
     font-size: 28px;
