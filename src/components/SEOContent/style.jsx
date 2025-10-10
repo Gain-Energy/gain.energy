@@ -10,7 +10,7 @@ export const SEOSection = styled.div`
 
 export const VisibleContent = styled.div`
     /* Visible content styled to blend with your dark background */
-    opacity: 0.03;
+    opacity: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;

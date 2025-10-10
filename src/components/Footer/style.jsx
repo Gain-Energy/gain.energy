@@ -186,17 +186,17 @@ export const NavigationLink = styled.a`
     }
 
     @media (max-width: 1024px) {
-        font-size: 12px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 300;
-        line-height: 110%;
+        line-height: 130%;
     }
 
     @media (max-width: 480px) {
-        font-size: 10px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 300;
-        line-height: 110%;
+        line-height: 130%;
     }
 `
 
@@ -281,7 +281,7 @@ export const Copyright = styled.p`
     @media (max-width: 1024px) {
         width: 300px;
         padding-top: 150px;
-        font-size: 10px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
@@ -290,7 +290,7 @@ export const Copyright = styled.p`
     @media (max-width: 480px) {
         width: 300px;
         padding-top: 15px;
-        font-size: 8px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 150%;

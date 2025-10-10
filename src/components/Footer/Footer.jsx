@@ -12,7 +12,8 @@ function Footer({ name, type }) {
         registerSection(name, scrollToRef)
     }, [name, registerSection])
 
-    const handleClick = (sectionName) => {
+    const handleClick = (e, sectionName) => {
+        e.preventDefault();
         scrollToSection(sectionName);
         // Update URL hash without triggering a scroll
         const formattedName = sectionName.toLowerCase();
@@ -29,28 +30,29 @@ function Footer({ name, type }) {
                 </S.ContactUsBlock>
                 <S.NavigationBlock>
                     <S.LinkItemsBlock>
-                        <a href="mailto:upstrima@gain.energy">
-                            <S.LinkItem xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <a href="mailto:upstrima@gain.energy" aria-label="Send email to UPSTRIMA" title="Contact us via email">
+                            <S.LinkItem as="svg" role="img" aria-labelledby="emailIconTitle" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <title id="emailIconTitle">Email icon - Click to send email to UPSTRIMA</title>
                                 <path d="M61.25 13.125H8.75C8.16984 13.125 7.61344 13.3555 7.2032 13.7657C6.79297 14.1759 6.5625 14.7323 6.5625 15.3125V52.5C6.5625 53.6603 7.02344 54.7731 7.84391 55.5936C8.66438 56.4141 9.77718 56.875 10.9375 56.875H59.0625C60.2228 56.875 61.3356 56.4141 62.1561 55.5936C62.9766 54.7731 63.4375 53.6603 63.4375 52.5V15.3125C63.4375 14.7323 63.207 14.1759 62.7968 13.7657C62.3866 13.3555 61.8302 13.125 61.25 13.125ZM55.6254 17.5L35 36.4082L14.3746 17.5H55.6254ZM59.0625 52.5H10.9375V20.2863L33.5207 40.9883C33.9243 41.3587 34.4522 41.5643 35 41.5643C35.5478 41.5643 36.0757 41.3587 36.4793 40.9883L59.0625 20.2863V52.5Z" fill="#F9F6EF" />
                             </S.LinkItem>
                         </a>
-                        <a href="https://www.linkedin.com/company/gainenergy">
-                            <S.LinkItem xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <a href="https://www.linkedin.com/company/gainenergy" aria-label="Visit UPSTRIMA on LinkedIn" title="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <S.LinkItem as="svg" role="img" aria-labelledby="linkedinIconTitle" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <title id="linkedinIconTitle">LinkedIn icon - Click to visit UPSTRIMA's LinkedIn page</title>
                                 <path d="M59.0625 6.5625H10.9375C9.77718 6.5625 8.66438 7.02344 7.84391 7.84391C7.02344 8.66438 6.5625 9.77718 6.5625 10.9375V59.0625C6.5625 60.2228 7.02344 61.3356 7.84391 62.1561C8.66438 62.9766 9.77718 63.4375 10.9375 63.4375H59.0625C60.2228 63.4375 61.3356 62.9766 62.1561 62.1561C62.9766 61.3356 63.4375 60.2228 63.4375 59.0625V10.9375C63.4375 9.77718 62.9766 8.66438 62.1561 7.84391C61.3356 7.02344 60.2228 6.5625 59.0625 6.5625ZM59.0625 59.0625H10.9375V10.9375H59.0625V59.0625ZM26.25 30.625V48.125C26.25 48.7052 26.0195 49.2616 25.6093 49.6718C25.1991 50.082 24.6427 50.3125 24.0625 50.3125C23.4823 50.3125 22.9259 50.082 22.5157 49.6718C22.1055 49.2616 21.875 48.7052 21.875 48.125V30.625C21.875 30.0448 22.1055 29.4884 22.5157 29.0782C22.9259 28.668 23.4823 28.4375 24.0625 28.4375C24.6427 28.4375 25.1991 28.668 25.6093 29.0782C26.0195 29.4884 26.25 30.0448 26.25 30.625ZM50.3125 38.2812V48.125C50.3125 48.7052 50.082 49.2616 49.6718 49.6718C49.2616 50.082 48.7052 50.3125 48.125 50.3125C47.5448 50.3125 46.9884 50.082 46.5782 49.6718C46.168 49.2616 45.9375 48.7052 45.9375 48.125V38.2812C45.9375 36.8308 45.3613 35.4398 44.3357 34.4143C43.3101 33.3887 41.9191 32.8125 40.4687 32.8125C39.0183 32.8125 37.6273 33.3887 36.6018 34.4143C35.5762 35.4398 35 36.8308 35 38.2812V48.125C35 48.7052 34.7695 49.2616 34.3593 49.6718C33.9491 50.082 33.3927 50.3125 32.8125 50.3125C32.2323 50.3125 31.6759 50.082 31.2657 49.6718C30.8555 49.2616 30.625 48.7052 30.625 48.125V30.625C30.6277 30.0892 30.827 29.573 31.185 29.1744C31.5431 28.7757 32.035 28.5224 32.5674 28.4623C33.0999 28.4023 33.6358 28.5398 34.0736 28.8487C34.5114 29.1577 34.8206 29.6165 34.9426 30.1383C36.4224 29.1344 38.1477 28.5526 39.9332 28.4553C41.7187 28.358 43.497 28.749 45.0771 29.5861C46.6573 30.4232 47.9795 31.675 48.9019 33.2069C49.8242 34.7388 50.3119 36.4931 50.3125 38.2812ZM27.3437 22.9687C27.3437 23.6177 27.1513 24.2521 26.7908 24.7917C26.4302 25.3313 25.9177 25.7519 25.3182 26.0002C24.7186 26.2486 24.0589 26.3136 23.4224 26.187C22.7859 26.0603 22.2012 25.7478 21.7423 25.2889C21.2834 24.8301 20.9709 24.2454 20.8443 23.6089C20.7177 22.9724 20.7827 22.3126 21.031 21.7131C21.2794 21.1135 21.6999 20.601 22.2395 20.2405C22.7791 19.8799 23.4135 19.6875 24.0625 19.6875C24.9327 19.6875 25.7673 20.0332 26.3827 20.6486C26.998 21.2639 27.3437 22.0985 27.3437 22.9687Z" fill="#F9F6EF" />
                             </S.LinkItem>
                         </a>
                     </S.LinkItemsBlock>
                     <S.NavigationHeadline>Navigate</S.NavigationHeadline>
                     <S.NavigationList>
-                        {type ? <S.NavigationLink href='/#perspective'>Perspective</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Perspective')}>Perspective</S.NavigationLink>}
-                        {type ? <S.NavigationLink href='/#features'>Features</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Features')} >Features</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#cases">Cases</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Cases')}>Cases</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#products">Products</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Products')} >Products</S.NavigationLink>}
-                        {/* {type ? <S.NavigationLink href="/#core">Core</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Core')} >Core</S.NavigationLink>} */}
-                        {type ? <S.NavigationLink href="/#company">Company</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Company')} >Company</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#partners">Partners</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('Partners')} >Partners</S.NavigationLink>}
-                        {type ? <S.NavigationLink href="/#news">News</S.NavigationLink> : <S.NavigationLink onClick={() => handleClick('News')} >News</S.NavigationLink>}
-                        <S.NavigationLink href="/privacy">Privacy and Policy</S.NavigationLink>
+                        <S.NavigationLink href="/#perspective" onClick={(e) => !type && handleClick(e, 'Perspective')} aria-label="Go to Perspective section">Perspective</S.NavigationLink>
+                        <S.NavigationLink href="/#features" onClick={(e) => !type && handleClick(e, 'Features')} aria-label="Go to Features section">Features</S.NavigationLink>
+                        <S.NavigationLink href="/#cases" onClick={(e) => !type && handleClick(e, 'Cases')} aria-label="Go to Cases section">Cases</S.NavigationLink>
+                        <S.NavigationLink href="/#products" onClick={(e) => !type && handleClick(e, 'Products')} aria-label="Go to Products section">Products</S.NavigationLink>
+                        <S.NavigationLink href="/#company" onClick={(e) => !type && handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.NavigationLink>
+                        <S.NavigationLink href="/#partners" onClick={(e) => !type && handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.NavigationLink>
+                        <S.NavigationLink href="/#news" onClick={(e) => !type && handleClick(e, 'News')} aria-label="Go to News section">News</S.NavigationLink>
+                        <S.NavigationLink href="/privacy" aria-label="View Privacy Policy">Privacy and Policy</S.NavigationLink>
                     </S.NavigationList>
                 </S.NavigationBlock>
                 <S.LogoAndCopyright>

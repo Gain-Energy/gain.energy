@@ -51,14 +51,14 @@ function Menu() {
                     </svg>
                 </S.CloseButton>
                 <S.ItemsBlock>
-                    <S.MenuItem as="a" href="#perspective" onClick={(e) => handleClick(e, 'Perspective')}>Perspective</S.MenuItem>
-                    <S.MenuItem as="a" href="#features" onClick={(e) => handleClick(e, 'Features')}>Features</S.MenuItem>
-                    <S.MenuItem as="a" href="#cases" onClick={(e) => handleClick(e, 'Cases')}>Cases</S.MenuItem>
-                    <S.MenuItem as="a" href="#products" onClick={(e) => handleClick(e, 'Products')}>Products</S.MenuItem>
-                    <S.MenuItem as="a" href="#company" onClick={(e) => handleClick(e, 'Company')}>Company</S.MenuItem>
-                    <S.MenuItem as="a" href="#partners" onClick={(e) => handleClick(e, 'Partners')}>Partners</S.MenuItem>
-                    <S.MenuItem as="a" href="#news" onClick={(e) => handleClick(e, 'News')}>News</S.MenuItem>
-                    <S.MenuItem as="a" href="#contacts" onClick={(e) => handleClick(e, 'Contacts')}>Contacts</S.MenuItem>
+                    <S.MenuItem href="/#perspective" onClick={(e) => handleClick(e, 'Perspective')} aria-label="Go to Perspective section">Perspective</S.MenuItem>
+                    <S.MenuItem href="/#features" onClick={(e) => handleClick(e, 'Features')} aria-label="Go to Features section">Features</S.MenuItem>
+                    <S.MenuItem href="/#cases" onClick={(e) => handleClick(e, 'Cases')} aria-label="Go to Cases section">Cases</S.MenuItem>
+                    <S.MenuItem href="/#products" onClick={(e) => handleClick(e, 'Products')} aria-label="Go to Products section">Products</S.MenuItem>
+                    <S.MenuItem href="/#company" onClick={(e) => handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.MenuItem>
+                    <S.MenuItem href="/#partners" onClick={(e) => handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.MenuItem>
+                    <S.MenuItem href="/#news" onClick={(e) => handleClick(e, 'News')} aria-label="Go to News section">News</S.MenuItem>
+                    <S.MenuItem href="/#contacts" onClick={(e) => handleClick(e, 'Contacts')} aria-label="Go to Contacts section">Contacts</S.MenuItem>
                 </S.ItemsBlock>
             </S.MenuContainer>
         </S.MenuWrapper>

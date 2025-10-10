@@ -83,26 +83,24 @@ export const ContentHeader = styled.h2`
 export const Img = styled.div`
     position: relative;
     width: 501px;
-    height: 282px;
+    aspect-ratio: 16/9;
     overflow: hidden;
-    aspect-ratio: 1920/1080;
     
     video {
         width: 100%;
+        height: 100%;
         position: absolute;
-        aspect-ratio: 1920/1080;
         top: 0;
         left: 0;
+        object-fit: cover;
     }
 
     @media (max-width: 1024px) {
         width: 100%;
-        height: 200px;
     }
 
     @media (max-width: 480px) {
         width: 100%;
-        height: 273px;
     }
 `
 
@@ -153,7 +151,7 @@ export const PlayText = styled.span`
     white-space: nowrap;
 
     @media (max-width: 480px) {
-        font-size: 10px;
+        font-size: 14px;
     }
 `
 
@@ -195,7 +193,7 @@ export const PreviewLogo = styled.div`
     @media (max-width: 480px) {
         top: 10px;
         right: 10px;
-        font-size: 10px;
+        font-size: 12px;
     }
 `
 
@@ -344,10 +342,10 @@ export const PerspectiveHeader = styled.h3`
     line-height: 110%; 
 
     @media (max-width: 1024px) {
-        font-size: 15px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 300;
-        line-height: 110%;
+        line-height: 130%;
     }
 `
 
@@ -363,9 +361,9 @@ export const PerspectiveText = styled.p`
     line-height: 120%; 
 
     @media (max-width: 1024px) {
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 120%;
+        line-height: 140%;
     }
 `
