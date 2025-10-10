@@ -301,7 +301,7 @@ export const MobileText = styled.p`
     color: ${({ isActive }) => 
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
     font-family: "JetBrains Mono";
-    font-size: 10px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
@@ -384,19 +384,19 @@ export const FeaturesContent = styled.div`
 `
 
 export const FeaturesImage = styled.img`
-    width: 425px;
-    height: 259px;
-
-    @media (max-width: 1024px) {
-        width: 100%;
-        height: 155px;
-    }
-
-    @media (max-width: 480px) { 
-        margin-top: 10px;
-        width: 100%;
-        height: 140px;
-    }
+     width: 425px;
+     aspect-ratio: 1.64;
+     object-fit: contain;
+     background-color: #000;
+ 
+     @media (max-width: 1024px) {
+         width: 100%;
+     }
+ 
+     @media (max-width: 480px) { 
+         margin-top: 10px;
+         width: 100%;
+     }
 `
 
 export const FeaturesText = styled.p`
@@ -414,11 +414,11 @@ export const FeaturesText = styled.p`
     text-overflow: ellipsis;    
 
     @media (max-width: 1024px) {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     @media (max-width: 480px) { 
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%;

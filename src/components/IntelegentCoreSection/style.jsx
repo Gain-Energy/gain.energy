@@ -199,7 +199,7 @@ export const AdvantagesList = styled.ul`
     @media (max-width: 1024px) {
         width: 205px;
         gap: 10px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%; 
@@ -208,7 +208,7 @@ export const AdvantagesList = styled.ul`
     @media (max-width: 480px) {
         width: 297px;
         gap: 10px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%; 

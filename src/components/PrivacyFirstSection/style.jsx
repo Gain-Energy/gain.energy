@@ -186,7 +186,7 @@ export const ContentRightText = styled.p`
 
     @media (max-width: 1024px) {
         width: 300px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%;
@@ -289,7 +289,7 @@ export const StartDrillingsInscription = styled.p`
         bottom: 20px;
         left: 56px;
         transform: none;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%;

@@ -221,8 +221,14 @@
     }
     </script>
     
-    <!-- Preload critical resources for performance -->
+    <!-- Font optimization -->
     <link rel="preload" href="%PUBLIC_URL%/fonts/PPNikkeiPacific-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="stylesheet" href="%PUBLIC_URL%/fonts.css" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="%PUBLIC_URL%/img/man-at-work.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="%PUBLIC_URL%/up_cover.png" as="image" />
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />

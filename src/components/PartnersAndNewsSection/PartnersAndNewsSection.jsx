@@ -307,7 +307,7 @@ function PartnersAndNewsSection() {
                                         />
                                     </div>
                                     <S.NewsItemHeadline>
-                                        {item.date}
+                                        <S.NewsItemDate datetime={item.date}>{item.date}</S.NewsItemDate>
                                     </S.NewsItemHeadline>
                                     <S.NewsItemText
                                         dangerouslySetInnerHTML={{ __html: item?.text }}

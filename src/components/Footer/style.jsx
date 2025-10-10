@@ -29,19 +29,18 @@ export const Content = styled.div`
 export const FooterGradient = styled.img`
     position: absolute;
     width: 100%;
-    height: 200%;
+    aspect-ratio: 1600/600;
     bottom: 0;
     right: 0;
     pointer-events: none;
+    object-fit: cover;
 
     @media (max-width: 1024px) {
         width: 250%;
-        height: 150%;
     }
 
     @media (max-width: 480px) {
         width: 250%;
-        height: 150%;
     }
 `
 

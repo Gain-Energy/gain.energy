@@ -118,7 +118,7 @@ export const Text = styled.p`
 
     @media (max-width: 1024px) {
         width: 269px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 300;
         line-height: 120%;
@@ -219,7 +219,7 @@ export const Case = styled.div`
         padding: ${({ position }) =>
             position === 'right' ? '20px 0 7px 7px' : '20px 7px 7px 0'};
         width: 133px;
-        font-size: 11px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 300;
         line-height: 110%; 
@@ -429,7 +429,7 @@ export const UpperText = styled.span`
 
     @media (max-width: 1024px) { 
         padding-top: 18px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 105%;

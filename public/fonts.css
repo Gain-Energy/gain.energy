@@ -1,0 +1,21 @@
+/* Font face declarations with performance optimizations */
+@font-face {
+  font-family: 'PP Nikkei Pacific';
+  src: url('/fonts/PPNikkeiPacific-Regular.otf') format('opentype');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+  font-display: swap;
+}
+
+/* Font feature settings for better performance */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

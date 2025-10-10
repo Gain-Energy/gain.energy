@@ -152,7 +152,7 @@ export const PathStartTop = styled.p`
     text-transform: uppercase;
 
     @media (max-width: 480px) {
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%; 
@@ -223,7 +223,7 @@ export const PathItemText = styled.p`
 
     @media (max-width: 1024px) {
         width: 102px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%; 
@@ -231,7 +231,7 @@ export const PathItemText = styled.p`
 
     @media (max-width: 480px) {
         width: 102px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%; 
@@ -269,7 +269,7 @@ export const PathNumber = styled.p`
     transition: all .3s ease;
 
     @media (max-width: 1024px) {
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%; 
@@ -291,7 +291,7 @@ export const PathEnd = styled.p`
 
     @media (max-width: 1024px) {
         right: 12px;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;     
         font-weight: 400;
         line-height: 120%; 
@@ -300,7 +300,7 @@ export const PathEnd = styled.p`
     }
 
     @media (max-width: 480px) {
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;     
         font-weight: 400;
         line-height: 120%; 
@@ -328,7 +328,7 @@ export const Text = styled.p`
     @media (max-width: 480px) {
         width: 300px;
         font-weight: 400;
-        font-size: 10px;    
+        font-size: 14px;    
         line-height: 130%;
     }
 `

@@ -55,13 +55,13 @@ export const Counter = styled.div`
         margin-right: 15px;
         width: 35px;
         height: 18px;
-        font-size: 10px;
+        font-size: 14px;
     }
 
     @media (max-width: 480px) {
         margin-right: 0;
         width: 30px;
         height: 16px;
-        font-size: 10px;
+        font-size: 14px;
     }
 `
