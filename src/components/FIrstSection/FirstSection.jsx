@@ -124,10 +124,10 @@ function FirstSection() {
                         </S.ContentRightHeader>
                         <div style={{ width: "100%", display: 'flex', flexDirection: "column", gap: 20 }}>
                             <S.ContentRightText>
-                                {`The global oil and gas industry loses about $20 billion annually due to inefficiencies and outdated practices. Our AI for oil and gas solutions can reduce these losses by 30-40%.`}
+                                {`The global oil and gas industry loses about $20 bln annually due to inefficiencies and outdated practices. AI can reduce that by 30-40%.`}
                             </S.ContentRightText>
                             <S.ContentRightText style={{ fontWeight: 700 }}>
-                                {`Our Solution: Specialized petroleum AI agents delivering macro-impact on drilling productivity, operational accuracy, and overall performance.`}
+                                {`Our Solution: Specialized micro-AI agents delivering macro-impact on productivity, accuracy and performance.`}
                             </S.ContentRightText>
                         </div>
                         <S.Arrow xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">
