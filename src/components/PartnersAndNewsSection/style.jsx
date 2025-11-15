@@ -271,11 +271,13 @@ export const NewsShowcase = styled.div`
     display: flex;
     align-items: flex-start;
     overflow: hidden;
+    margin-left: 60px;
 
     @media (max-width: 480px) {
         &.keen-slider:not([data-keen-slider-disabled]) {
             overflow: visible;
         }
+        margin-left: 10px;
     }
 `
 
@@ -355,6 +357,8 @@ export const NewsItem = styled.div`
 
 export const NewsItemImg = styled.img`
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     opacity: ${({ isActive }) => 
         (isActive ? '1' : '0.2')};
     transition: all .3s ease;

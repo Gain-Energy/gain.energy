@@ -6,8 +6,14 @@ import news5 from '../img/news-5.png';
 import news6 from '../img/news-6.jpg';
 import news7 from '../img/news-7.jpg';
 import news8 from '../img/news-8.png';
+import news9 from '../img/news-9.png';
 
 const news = [
+    {
+        imageSrc: news9,
+        date: '29 October 2025',
+        text: 'Gain.Energy is joining forces with Bardasz to enable the seamless integration of Upstrima AI Solutions directly with real-time drilling & completions data through WITSML. This partnership allows our AI Agents and Workflows to process, interpret, and act on data as it is generated! Soon to come - Live AI Agents.'
+    },
     {
         imageSrc: news8,
         date: '7 August 2025',
@@ -47,7 +53,7 @@ const news = [
         imageSrc: news1,
         date: '5 Nov 2024',
         text: 'Our CEO Vlad K. Payrazyan presented Upstrima at ADIPEC 2024 Conference and Exhibition in Abu Dhabi, UAE.'
-    },
+    }
 ]
 
 export default news;
