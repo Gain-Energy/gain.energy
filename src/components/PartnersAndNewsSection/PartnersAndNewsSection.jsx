@@ -297,15 +297,13 @@ function PartnersAndNewsSection() {
                                     className="keen-slider__slide"
                                     isActive={index === currentSlide}
                                 >
-                                    <div
-                                        style={{ aspectRatio: "1920/1080", display: 'flex', alignItems: "center", overflow: "hidden" }}
-                                    >
+                                    <S.NewsItemImgContainer>
                                         <S.NewsItemImg
                                             isActive={index === currentSlide}
                                             src={item.imageSrc}
                                             alt={`${item.title} - Oil and gas industry AI news and updates from UPSTRIMA`}
                                         />
-                                    </div>
+                                    </S.NewsItemImgContainer>
                                     <S.NewsItemHeadline>
                                         <S.NewsItemDate datetime={item.date}>{item.date}</S.NewsItemDate>
                                     </S.NewsItemHeadline>

@@ -7,8 +7,26 @@ import news6 from '../img/news-6.jpg';
 import news7 from '../img/news-7.jpg';
 import news8 from '../img/news-8.png';
 import news9 from '../img/news-9.png';
+import news10 from '../img/news-10.png';
+import news11 from '../img/news-11.png';
+import news12 from '../img/news-12.png';
 
 const news = [
+    {
+        imageSrc: news12,
+        date: '5 November 2025',
+        text: 'Gain.Energy invites you to a live Lunch & Learn on December 2, 2025, at The ION District, Houston, Texas. The session, “Specialized AI Agents for the Oil and Gas Industry: Practical Engineering, Use Cases, Demos, and Limitations,” will focus on the strategic application of Data-Driven AI Agents. This in-depth, hands-on event is for technical specialists and operational leadership, covering real-world engineering, live demos, and an objective analysis of current constraints.'
+    },
+    {
+        imageSrc: news11,
+        date: '3 November 2025',
+        text: 'Dr. Vlad Karén Payrazyan, our CEO, delivered a keynote in the AI Zone at ADIPEC on November 3, showcasing live demonstrations of how Data-Driven AI Agents automate workflows and enhance engineer capabilities in the energy sector. ADIPEC 2025, with its interactive presentations and technical discussions, was a major success for Gain.Energy.'
+    },
+    {
+        imageSrc: news10,
+        date: '3 November 2025',
+        text: 'From November 3–6, Gain.Energy exhibited at ADIPEC 2025 in Abu Dhabi, showcasing our cutting-edge Data-Driven AI Agents transforming oil & gas operations. CEO Dr. Vlad Karén Payrazyan spoke in the AI Zone on automation, augmented engineering, and performance-driven intelligence. Attendees saw live demonstrations of how AI achieves operational excellence and efficiency in upstream and downstream processes. We thank everyone who connected with us.'
+    },
     {
         imageSrc: news9,
         date: '29 October 2025',
