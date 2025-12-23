@@ -10,8 +10,14 @@ import news9 from '../img/news-9.png';
 import news10 from '../img/news-10.png';
 import news11 from '../img/news-11.png';
 import news12 from '../img/news-12.png';
+import news13 from '../img/news-13.png';
 
 const news = [
+    {
+        imageSrc: news13,
+        date: '23 Dec 2026',
+        text: 'Gain.Energy, in collaboration with ONYX iES, cordially invites you to an exclusive AI Workshop session in Kuala Lumpur. This workshop will provide an in-depth examination of the practical application of advanced Artificial Intelligence within the Oil and Gas sector, with a focus on accelerating AI adoption across the industry. Our core objective is to democratize AI for end-users by empowering engineers and domain experts with specialized and accessible AI tools, enabling greater efficiency and innovation.'
+    },
     {
         imageSrc: news12,
         date: '5 November 2025',
