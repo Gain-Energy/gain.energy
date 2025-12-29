@@ -59,7 +59,7 @@ function HomePage() {
             <DrillingEngineeringSection />
             <CompanySection name={'Company'} />
             <PartnersAndNewsSection />
-            <SEOContent />
+            {/* <SEOContent /> */}
             <Footer name={'Contacts'} />
           </Lenis>
         </PopupProvider>
