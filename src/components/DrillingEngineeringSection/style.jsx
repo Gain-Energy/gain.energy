@@ -185,6 +185,7 @@ export const PathList = styled.div`
     display: flex;
     flex-direction: column;
     gap: 19px;
+    margin-top: 160px;
 
     @media (max-width: 1024px) {
         padding-left: 92px;
