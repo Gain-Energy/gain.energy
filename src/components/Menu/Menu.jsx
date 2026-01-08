@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
-import { useScroll } from '../contexts/ScrollProvider';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useMenu } from '../contexts/MenuProvider';
 import * as S from './style';
 
 function Menu() {
     const { menuOpen, toggleMenu } = useMenu()
-    const { scrollToSection } = useScroll()
+    const navigate = useNavigate()
     const menuRef = useRef(null)
 
     useEffect(() => {
@@ -32,11 +32,9 @@ function Menu() {
     function handleClick(e, name) {
         e.preventDefault();
         toggleMenu();
-        scrollToSection(name);
         
-        // Update URL hash without triggering a scroll
         const formattedName = name.toLowerCase();
-        window.history.pushState(null, '', `#${formattedName}`);
+        navigate(`/${formattedName}`);
     }
 
     return (
@@ -51,14 +49,14 @@ function Menu() {
                     </svg>
                 </S.CloseButton>
                 <S.ItemsBlock>
-                    <S.MenuItem href="/#perspective" onClick={(e) => handleClick(e, 'Perspective')} aria-label="Go to Perspective section">Perspective</S.MenuItem>
-                    <S.MenuItem href="/#features" onClick={(e) => handleClick(e, 'Features')} aria-label="Go to Features section">Features</S.MenuItem>
-                    <S.MenuItem href="/#cases" onClick={(e) => handleClick(e, 'Cases')} aria-label="Go to Cases section">Cases</S.MenuItem>
-                    <S.MenuItem href="/#products" onClick={(e) => handleClick(e, 'Products')} aria-label="Go to Products section">Products</S.MenuItem>
-                    <S.MenuItem href="/#company" onClick={(e) => handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.MenuItem>
-                    <S.MenuItem href="/#partners" onClick={(e) => handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.MenuItem>
-                    <S.MenuItem href="/#news" onClick={(e) => handleClick(e, 'News')} aria-label="Go to News section">News</S.MenuItem>
-                    <S.MenuItem href="/#contacts" onClick={(e) => handleClick(e, 'Contacts')} aria-label="Go to Contacts section">Contacts</S.MenuItem>
+                    <S.MenuItem href="/perspective" onClick={(e) => handleClick(e, 'Perspective')} aria-label="Go to Perspective section">Perspective</S.MenuItem>
+                    <S.MenuItem href="/features" onClick={(e) => handleClick(e, 'Features')} aria-label="Go to Features section">Features</S.MenuItem>
+                    <S.MenuItem href="/cases" onClick={(e) => handleClick(e, 'Cases')} aria-label="Go to Cases section">Cases</S.MenuItem>
+                    <S.MenuItem href="/products" onClick={(e) => handleClick(e, 'Products')} aria-label="Go to Products section">Products</S.MenuItem>
+                    <S.MenuItem href="/company" onClick={(e) => handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.MenuItem>
+                    <S.MenuItem href="/partners" onClick={(e) => handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.MenuItem>
+                    <S.MenuItem href="/news" onClick={(e) => handleClick(e, 'News')} aria-label="Go to News section">News</S.MenuItem>
+                    <S.MenuItem href="/contacts" onClick={(e) => handleClick(e, 'Contacts')} aria-label="Go to Contacts section">Contacts</S.MenuItem>
                 </S.ItemsBlock>
             </S.MenuContainer>
         </S.MenuWrapper>

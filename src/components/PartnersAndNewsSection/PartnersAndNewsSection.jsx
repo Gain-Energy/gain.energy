@@ -1,18 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import { useScroll } from '../contexts/ScrollProvider';
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+import { useMediaQuery } from "react-responsive";
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useMediaQuery } from "react-responsive";
-// import partner1 from '../../img/partner-1.svg';
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { useScroll } from '../contexts/ScrollProvider';
 import partner2 from '../../img/partner-2.svg';
-// import partner3 from '../../img/partner-3.svg';
-// import partner4 from '../../img/partner-4.svg';
-// import partner1mob from '../../img/partner-1-mob.svg'
 import partner2mob from '../../img/partner-2-mob.svg'
-// import partner3mob from '../../img/partner-3-mob.svg'
-// import partner4mob from '../../img/partner-4-mob.svg'
 import * as S from './style';
 
 import news from '../../data/news';
@@ -48,8 +42,7 @@ function PartnersAndNewsSection() {
         },
     })
 
-    const scrollToPartners = useRef(null)
-    const partners = useRef(null)
+    const partnersRef = useRef(null)
     const scrollToNews = useRef(null)
 
     const { registerSection } = useScroll()
@@ -73,11 +66,11 @@ function PartnersAndNewsSection() {
     }, [])
 
     useEffect(() => {
-        registerSection('Partners', scrollToPartners)
+        registerSection('Partners', partnersRef)
         registerSection('News', scrollToNews)
 
         gsap.fromTo(
-            partners.current,
+            partnersRef.current,
             {
                 opacity: 0,
                 y: '20%'
@@ -88,7 +81,7 @@ function PartnersAndNewsSection() {
                 duration: 1,
                 ease: 'power2.out',
                 scrollTrigger: {
-                    trigger: partners.current,
+                    trigger: partnersRef.current,
                     start: 'top-=30% 50%',
                     toggleActions: 'play none none none',
                     // markers: true
@@ -147,8 +140,8 @@ function PartnersAndNewsSection() {
     }
 
     return (
-        <S.PartnersAndNewsSection ref={scrollToPartners}>
-            <S.PartnersBlock ref={partners}>
+        <S.PartnersAndNewsSection>
+            <S.PartnersBlock ref={partnersRef}>
                 <S.PartnersHeadline>Our Partners</S.PartnersHeadline>
                 <S.PartnersShowcase>
                     {isTablet ?

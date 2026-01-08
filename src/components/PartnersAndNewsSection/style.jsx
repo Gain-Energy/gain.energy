@@ -28,7 +28,7 @@ export const PartnersBlock = styled.div`
     gap: 273px;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 30px 100px 30px;
+    padding: 120px 30px 100px 30px;
 
     @media (max-width: 1024px) {
         max-width: 600px;

@@ -1,9 +1,10 @@
-import ScrollProvider from '../../components/contexts/ScrollProvider';
+import { useEffect } from 'react';
+import { useMediaQuery } from "react-responsive";
+import { Lenis } from '@studio-freight/react-lenis';
+import ScrollProvider, { useScroll } from '../../components/contexts/ScrollProvider';
 import { MenuProvider } from '../../components/contexts/MenuProvider';
 import { PopupProvider } from '../../components/contexts/PopupProvider';
-import { Lenis } from '@studio-freight/react-lenis';
 import GlobalStyles from '../../components/GlobalStyles';
-import { useMediaQuery } from "react-responsive";
 import PathDrilling from "../../components/PathDrilling/PathDrilling";
 import PathDrillingTabl from "../../components/PathDrillingTabl/PathDrillingTabl";
 import PathDrillingMob from "../../components/PathDrillingMob/PathDrillingMob";
@@ -15,57 +16,67 @@ import FirstSection from "../../components/FIrstSection/FirstSection";
 import OurPerspectiveSection from "../../components/OurPerspectiveSection/OurPerspectiveSection";
 import KeyFeaturesSection from "../../components/KeyFeaturesSection/KeyFeaturesSection";
 import UseCasesSection from "../../components/UseCasesSection/UseCasesSection";
-// import OurProductsSection from "../../components/OurProductsSection/OurProductsSection";
-// import BlackLayer from "../../components/BlackLayer/BlackLayer";
 import IntelegentCoreSection from "../../components/IntelegentCoreSection/IntelegentCoreSection";
 import DrillingEngineeringSection from "../../components/DrillingEngineeringSection/DrillingEngineeringSection";
 import CompanySection from "../../components/CompanySection/CompanySection";
 import PartnersAndNewsSection from "../../components/PartnersAndNewsSection/PartnersAndNewsSection";
 import Footer from "../../components/Footer/Footer";
-import SEOContent from "../../components/SEOContent/SEOContent";
 
-function HomePage() {
-  const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
+const HomePageContent = ({ section }) => {
+  const { scrollToSection } = useScroll();
+  const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+
+  useEffect(() => {
+    if (section) {
+      const timer = setTimeout(() => {
+        scrollToSection(section);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [section, scrollToSection]);
+
+  return (
+    <Lenis
+      root
+      options={{ smooth: true }}
+    >
+      <GlobalStyles />
+      {isMobile ?
+        <PathDrillingMob />
+        :
+        isTablet ?
+          <PathDrillingTabl />
+          :
+          <PathDrilling />
+      }
+      <Scale />
+      <Counter />
+      <Header />
+      <Menu />
+      <FirstSection />
+      <OurPerspectiveSection name={'Perspective'} />
+      <KeyFeaturesSection name={'Features'} />
+      <UseCasesSection name={'Cases'} />
+      <IntelegentCoreSection name={'Products'} />
+      <DrillingEngineeringSection />
+      <CompanySection name={'Company'} />
+      <PartnersAndNewsSection />
+      <Footer name={'Contacts'} />
+    </Lenis>
+  );
+}
+
+const HomePage = ({ section }) => {
   return (
     <ScrollProvider>
       <MenuProvider>
         <PopupProvider>
-          <Lenis
-            root
-            options={{ smooth: true }}
-          >
-            <GlobalStyles />
-            {isMobile ?
-              <PathDrillingMob />
-              :
-              isTablet ?
-                <PathDrillingTabl />
-                :
-                <PathDrilling />
-            }
-            <Scale />
-            <Counter />
-            <Header />
-            <Menu />
-            <FirstSection />
-            <OurPerspectiveSection name={'Perspective'} />
-            <KeyFeaturesSection name={'Features'} />
-            <UseCasesSection name={'Cases'} />
-            {/* <OurProductsSection name={'Products'} /> */}
-            {/* <BlackLayer position={'first'} /> */}
-            <IntelegentCoreSection name={'Products'} />
-            {/* <BlackLayer position={'second'} /> */}
-            <DrillingEngineeringSection />
-            <CompanySection name={'Company'} />
-            <PartnersAndNewsSection />
-            {/* <SEOContent /> */}
-            <Footer name={'Contacts'} />
-          </Lenis>
+          <HomePageContent section={section} />
         </PopupProvider>
       </MenuProvider>
     </ScrollProvider>
-  )
+  );
 }
 
 export default HomePage;

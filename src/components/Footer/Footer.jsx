@@ -1,11 +1,12 @@
 import { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useScroll } from '../contexts/ScrollProvider';
 import gradient from '../../img/gradient-footer.png'
 import * as S from './style';
 
 function Footer({ name, type }) {
-    const { scrollToSection } = useScroll()
     const { registerSection } = useScroll()
+    const navigate = useNavigate()
     const scrollToRef = useRef(null)
 
     useEffect(() => {
@@ -14,10 +15,9 @@ function Footer({ name, type }) {
 
     const handleClick = (e, sectionName) => {
         e.preventDefault();
-        scrollToSection(sectionName);
-        // Update URL hash without triggering a scroll
+        
         const formattedName = sectionName.toLowerCase();
-        window.history.pushState(null, '', `#${formattedName}`);
+        navigate(`/${formattedName}`);
     }
 
     return (
@@ -45,13 +45,13 @@ function Footer({ name, type }) {
                     </S.LinkItemsBlock>
                     <S.NavigationHeadline>Navigate</S.NavigationHeadline>
                     <S.NavigationList>
-                        <S.NavigationLink href="/#perspective" onClick={(e) => !type && handleClick(e, 'Perspective')} aria-label="Go to Perspective section">Perspective</S.NavigationLink>
-                        <S.NavigationLink href="/#features" onClick={(e) => !type && handleClick(e, 'Features')} aria-label="Go to Features section">Features</S.NavigationLink>
-                        <S.NavigationLink href="/#cases" onClick={(e) => !type && handleClick(e, 'Cases')} aria-label="Go to Cases section">Cases</S.NavigationLink>
-                        <S.NavigationLink href="/#products" onClick={(e) => !type && handleClick(e, 'Products')} aria-label="Go to Products section">Products</S.NavigationLink>
-                        <S.NavigationLink href="/#company" onClick={(e) => !type && handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.NavigationLink>
-                        <S.NavigationLink href="/#partners" onClick={(e) => !type && handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.NavigationLink>
-                        <S.NavigationLink href="/#news" onClick={(e) => !type && handleClick(e, 'News')} aria-label="Go to News section">News</S.NavigationLink>
+                        <S.NavigationLink href="/perspective" onClick={(e) => !type && handleClick(e, 'Perspective')} aria-label="Go to Perspective section">Perspective</S.NavigationLink>
+                        <S.NavigationLink href="/features" onClick={(e) => !type && handleClick(e, 'Features')} aria-label="Go to Features section">Features</S.NavigationLink>
+                        <S.NavigationLink href="/cases" onClick={(e) => !type && handleClick(e, 'Cases')} aria-label="Go to Cases section">Cases</S.NavigationLink>
+                        <S.NavigationLink href="/products" onClick={(e) => !type && handleClick(e, 'Products')} aria-label="Go to Products section">Products</S.NavigationLink>
+                        <S.NavigationLink href="/company" onClick={(e) => !type && handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.NavigationLink>
+                        <S.NavigationLink href="/partners" onClick={(e) => !type && handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.NavigationLink>
+                        <S.NavigationLink href="/news" onClick={(e) => !type && handleClick(e, 'News')} aria-label="Go to News section">News</S.NavigationLink>
                         <S.NavigationLink href="/privacy" aria-label="View Privacy Policy">Privacy and Policy</S.NavigationLink>
                     </S.NavigationList>
                 </S.NavigationBlock>
