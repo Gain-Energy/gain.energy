@@ -11,8 +11,15 @@ import news10 from '../img/news-10.png';
 import news11 from '../img/news-11.png';
 import news12 from '../img/news-12.png';
 import news13 from '../img/news-13.png';
+import news14 from '../img/news-14.png';
 
 const news = [
+    {
+        imageSrc: news14,
+        date: '4 Feb 2026',
+        text:  `Gain.Energy and Labrador invite you to an exclusive AI Workshop in Perth, Australia, on February 4th. This session will concentrate on the practical application of advanced Artificial Intelligence within the Oil and Gas sector, specifically addressing the accelerated adoption of AI across the industry. Our objective is to democratize AI by equipping engineers and domain experts with specialized, accessible tools to foster enhanced efficiency and innovation. <br/><br/>
+        <p style="word-break: break-all;">Please register here to confirm your attendance: <a target="_blank" rel="noopener noreferrer" href="https://form.jotform.com/253565778909275" style="color: white;">https://form.jotform.com/253565778909275</a><p>`
+    },
     {
         imageSrc: news13,
         date: '23 Dec 2025',
