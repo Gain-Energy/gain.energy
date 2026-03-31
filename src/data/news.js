@@ -12,8 +12,14 @@ import news11 from '../img/news-11.png';
 import news12 from '../img/news-12.png';
 import news13 from '../img/news-13.png';
 import news14 from '../img/news-14.png';
+import news15 from '../img/news-15.png';
 
 const news = [
+    {
+        imageSrc: news15,
+        date: '17 Mar 2026',
+        text:  `The <span style="font-weight: 600;">Gain.Energy</span> team exhibited at <span style="font-weight: 600;">IADC/SPE International Drilling Conference & Exhibition 2026</span>, connecting with industry leaders and engaging in technical discussions on the future of drilling operations. Our booth showcased how Data-Driven AI Agents automate workflows and enhance engineer capabilities in the energy sector. IADC/SPE International Drilling Conference 2026, with its dynamic exchanges and forward-looking sessions, was a major success for Gain.Energy.`
+    },
     {
         imageSrc: news14,
         date: '4 Feb 2026',
