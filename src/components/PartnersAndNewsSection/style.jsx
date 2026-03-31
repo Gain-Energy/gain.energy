@@ -380,7 +380,8 @@ export const NewsItemImgContainer = styled.div`
 export const NewsItemImg = styled.img`
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     opacity: ${({ isActive }) => 
         (isActive ? '1' : '0.2')};
     transition: all .3s ease;
