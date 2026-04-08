@@ -65,11 +65,6 @@ export const PartnersShowcase = styled.div`
     display: flex;
     gap: 20px;
 
-    img {
-        width: 114px;
-        height: 34px;
-    }
-
     @media (max-width: 1024px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
