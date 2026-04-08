@@ -25,15 +25,22 @@ export const PartnersAndNewsSection = styled.section`
 
 export const PartnersBlock = styled.div`
     display: flex;
-    gap: 273px;
+    gap: 400px;
     max-width: 1280px;
     margin: 0 auto;
     padding: 120px 30px 100px 30px;
 
+    @media (max-width: 1280px) {
+        max-width: 1280px;
+        justify-content: space-between;
+        gap: 200px;
+        padding: 0 30px 30px 30px;
+    }
+
     @media (max-width: 1024px) {
         max-width: 600px;
         justify-content: space-between;
-        gap: 240px;
+        gap: 200px;
         padding: 0 30px 30px 30px;
     }
 
@@ -63,6 +70,7 @@ export const PartnersHeadline = styled.h2`
 
 export const PartnersShowcase = styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 
     @media (max-width: 1024px) {
