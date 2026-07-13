@@ -13,8 +13,20 @@ import news12 from '../img/news-12.png';
 import news13 from '../img/news-13.png';
 import news14 from '../img/news-14.png';
 import news15 from '../img/news-15.png';
+import news16 from '../img/news-16.png';
+import news17 from '../img/news-17.png';
 
 const news = [
+    {
+        imageSrc: news17,
+        date: '14 July 2026',
+        text:  `We're launching Upstrima - the first marketplace of specialized AI agents, tools and workflows built exclusively for oil & gas.    Join us to see a live demo of everything Upstrima has to offer from Intelligent data processing to Human-AI Validation Loop and much more. <br/><br/><p style="word-break: break-all;">Please register here: <a target="_blank" rel="noopener noreferrer" href="https://form.jotform.com/261755735879072" style="color: white;">https://form.jotform.com/261755735879072</a><p>`
+    },
+    {
+        imageSrc: news16,
+        date: '22-24 June 2026',
+        text:  `The <span style="font-weight: 600;">Gain.Energy</span> team exhibited at URTeC 2026, where we connected with geoscientists, engineers, operators, and industry leaders while showcasing AI innovations for the future of unconventional resource development. We showcased <span style="font-weight: 600;">Upstrima</span> during the <span style="font-weight: 600;">New Technology Showcase</span> program, where our CEO, Dr. Vlad Karén Payrazyan, delivered the live pre-launch of <span style="font-weight: 600;">UPSTRIMA - </span><span style="font-weight: 600;">the Marketplace of Specialized Oil and Gas AI Agents and Workflows</span>.`
+    },
     {
         imageSrc: news15,
         date: '17 Mar 2026',
