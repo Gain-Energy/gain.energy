@@ -82,7 +82,7 @@ function KeyFeaturesPopup({activeFeature}) {
             <ClipPathSVG id="outer" pathData={isTablet ? pathDataTablet : isMobile ? pathDataMobile : pathDataDesktop} />
             <S.Inner onWheel={handleWheel}>
                 <S.InnerLeft>
-                    <S.Text ref={textRef}>{activeFeature.text}</S.Text>
+                    <S.Text ref={textRef} data-lenis-prevent>{activeFeature.text}</S.Text>
                     <S.Navigation>
                         <S.LeftButton onClick={handlePrev}>
                             <svg xmlns="http://www.w3.org/2000/svg" width={isTablet ? "7" : "12"} height={isTablet ? "10" : "17"} viewBox="0 0 12 17" fill="none">
@@ -101,7 +101,7 @@ function KeyFeaturesPopup({activeFeature}) {
                     <S.ImageWrapper>
                         <S.Image src={activeFeature.imageSrc[activeImg]}/>
                     </S.ImageWrapper>
-                    <S.ImagePreviewBlock>
+                    <S.ImagePreviewBlock data-lenis-prevent>
                         {activeFeature.imageSrc.map((item, index) => (
                             <S.ImagePreview 
                                 key={index} 
