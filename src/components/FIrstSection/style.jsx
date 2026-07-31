@@ -58,7 +58,7 @@ export const Content = styled.div`
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 279px;
+    padding-top: 248px;
     max-width: 1280px; 
     margin: 0 auto;
     padding-left: 30px;
@@ -66,7 +66,7 @@ export const Content = styled.div`
 
     @media (max-width: 1024px) {
         max-width: 600px;
-        padding-top: 169px;
+        padding-top: 130px;
         margin: 0 auto;
         padding-left: 30px;
         padding-right: 30px;
@@ -74,7 +74,7 @@ export const Content = styled.div`
     }
 
     @media (max-width: 480px) {
-        padding-top: 188px;
+        padding-top: 146px;
         flex-direction: column;
     }
 `
@@ -101,7 +101,7 @@ export const ContentHeader = styled.h1`
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -125,16 +125,43 @@ export const ContentHeader = styled.h1`
     }
 `
 
+export const ContentSubHeader = styled.p`
+    flex: 0 0 100%;
+    max-width: 759px;
+    margin-top: 16px;
+    color: var(--us_fill-white);
+    font-family: var(--us_font-display);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    z-index: 1;
+
+    @media (max-width: 1024px) {
+        max-width: 300px;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 120%;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 120%;
+    }
+`
+
 export const BottomContent = styled.div`    
     display: flex;
     justify-content: space-between;
-    margin-top: 64px;
-    gap: 250px;
+    width: 100%;
+    margin-top: 52px;
+    gap: 60px;
     flex-wrap: no-wrap;
 
     @media (max-width: 1024px) {
-        margin-top: 30px;
-        gap: 140px;
+        margin-top: 20px;
+        gap: 60px;
         width: 100%;
         justify-content: space-between;
     }
@@ -169,7 +196,7 @@ export const Button = styled.button`
     background-color: #00AAFF; 
     transition: background-color 0.3s ease;
 
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-weight: 400;
     font-size: 15px;
     line-height: 105%;
@@ -193,7 +220,7 @@ export const Button = styled.button`
     }
 
     ::before {
-        content: 'Join Exclusive Beta';
+        content: 'Start';
         padding: 14px 0;
         position: absolute;
         top: 0;
@@ -235,9 +262,9 @@ export const ContentRight = styled.div`
 `
 
 export const ContentRightHeader = styled.h3`
-    width: 600px;
+    width: max-content;
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -262,7 +289,7 @@ export const ContentRightText = styled.p`
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -278,6 +305,49 @@ export const ContentRightText = styled.p`
     
     @media (max-width: 480px) {
         width: 100%;
+    }
+`
+
+export const ContentRightList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: 1024px) {
+        width: 400px;
+        gap: 4px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+`
+
+export const ContentRightListItem = styled.li`
+    position: relative;
+    padding-left: 28px;
+    color: var(--us_fill-white);
+    font-family: var(--us_font-text);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    ::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #31ED37;
+    }
+
+    @media (max-width: 1024px) {
+        padding-left: 22px;
+        font-size: 14px;
+        line-height: 120%;
     }
 `
 
@@ -365,7 +435,7 @@ export const StartDrillingsInscription = styled.p`
     width: 74px;
     color: var(--us_fill-white);
     text-align: right;
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 13px;
     font-style: normal;
     font-weight: 400;

@@ -82,7 +82,7 @@ export const Logo = styled.svg`
 export const Header = styled.h2`
     width: 326px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -110,7 +110,7 @@ export const BigText = styled.p`
     width: 563px;
     padding-top: 74px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 32px;
     font-style: normal;
     font-weight: 300;
@@ -209,7 +209,7 @@ export const FeaturesItem = styled.h2`
     cursor: pointer;
     color: ${({isActive}) => (isActive ? 'var(--us_fill-green)' : 'var(--us_fill-white)')};
     text-align: right;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 36px;
     font-style: normal;
     font-weight: 300;
@@ -287,7 +287,7 @@ export const FeaturesMobileCard = styled.div`
 export const FeaturesHeading = styled.h2`
     width: 230px;
     color: var(--us_fill-green);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
@@ -300,7 +300,7 @@ export const MobileText = styled.p`
     align-self: start;
     color: ${({ isActive }) => 
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -385,9 +385,9 @@ export const FeaturesContent = styled.div`
 
 export const FeaturesImage = styled.img`
      width: 425px;
-     aspect-ratio: 1.64;
-     object-fit: contain;
-     background-color: #000;
+     aspect-ratio: 2.1;
+     object-fit: cover;
+     border-radius: 8px;
  
      @media (max-width: 1024px) {
          width: 100%;
@@ -401,7 +401,7 @@ export const FeaturesImage = styled.img`
 
 export const FeaturesText = styled.p`
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -438,7 +438,7 @@ export const FeaturesButton = styled.button`
     background-color: #00AAFF; 
     transition: background-color 0.3s ease;
 
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-weight: 400;
     font-size: 15px;
     line-height: 105%;

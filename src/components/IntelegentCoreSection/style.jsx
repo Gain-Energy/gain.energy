@@ -132,7 +132,7 @@ export const BackgroundImg = styled.img`
 export const Headline = styled.h2`
     width: 386px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -151,7 +151,7 @@ export const Headline = styled.h2`
 
 export const RightHeader = styled.p`
     width: 100%;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-weight: 300;
     font-size: 28px;
     line-height: 110%;
@@ -171,7 +171,7 @@ export const RightHeader = styled.p`
 export const AdvantagesList = styled.ul`
     width: 310px;
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -217,7 +217,7 @@ export const AdvantagesList = styled.ul`
 
 export const BigText = styled.p`
     width: 292px;
-    font-family: "Inter";
+    font-family: var(--us_font-text);
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;

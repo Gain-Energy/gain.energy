@@ -188,7 +188,7 @@ function OurPerspectiveSection({ name }) {
                             Industry-Specific Intelligence
                         </S.PerspectiveHeader>
                         <S.PerspectiveText>
-                            Powered by our proprietary custom-built OGAI LLM framework, UPSTRIMA delivers specialized knowledge and capabilities that generic AI platforms cannot match.
+                            Purpose-built for the energy sector, Upstrima embeds decades of human expertise, industry standards, best practices and real-world operational knowledge into every AI Agent and Workflow.
                         </S.PerspectiveText>
                     </S.Perspective>
                     <S.Perspective>

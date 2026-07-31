@@ -158,7 +158,7 @@ function KeyFeaturesSection({ name }) {
 
     const selectActiveFeature = (featureId) => {
         if (activeId) {
-            const feature = featuresTexts[featureId - 1]
+            const feature = featuresTexts.find(item => item.id === featureId)
             setActiveFeature(feature)
             togglePopup()
         }

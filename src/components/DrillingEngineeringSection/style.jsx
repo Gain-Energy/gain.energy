@@ -56,7 +56,7 @@ export const Content = styled.div`
 export const Headline = styled.h2`
     width: 599px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -87,7 +87,7 @@ export const HeadlineMob = styled.h2`
         display: block;
         width: 300px;
         color: var(--us_fill-white);
-        font-family: "PP Nikkei Pacific";
+        font-family: var(--us_font-display);
         font-size: 26px;
         font-style: normal;
         font-weight: 300;
@@ -144,7 +144,7 @@ export const PathStart = styled.div`
 export const PathStartTop = styled.p`
     color: var(--us_fill-white);
     text-align: center;
-    font-family: Inter;
+    font-family: var(--us_font-text);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -165,7 +165,7 @@ export const PathStartBottom = styled.p`
     width: 147px;
     color: var(--us_fill-green);
     text-align: center;
-    font-family: Inter;
+    font-family: var(--us_font-text);
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -215,7 +215,7 @@ export const PathItemText = styled.p`
     text-align: right;
     color: ${({ isActive }) => 
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -262,7 +262,7 @@ export const PathNumber = styled.p`
     color: ${({ isActive }) => 
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
     text-align: center;
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -287,7 +287,7 @@ export const PathEnd = styled.p`
     font-style: normal;
     font-weight: 400;
     line-height: 109%;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     text-transform: uppercase;
 
     @media (max-width: 1024px) {
@@ -315,7 +315,7 @@ export const PathEnd = styled.p`
 
 export const Text = styled.p`
     width: 400px;
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-weight: 400;
     font-size: 22px;
     line-height: 130%;

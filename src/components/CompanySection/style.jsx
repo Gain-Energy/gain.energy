@@ -41,7 +41,7 @@ export const Content = styled.div`
 
 export const Headline = styled.h2`
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -59,7 +59,7 @@ export const Headline = styled.h2`
 export const Text = styled.p`
     width: 577px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 36px;
     font-style: normal;
     font-weight: 300;

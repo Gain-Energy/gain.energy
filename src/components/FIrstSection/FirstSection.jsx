@@ -3,6 +3,15 @@ import FirstGradient from '../Gradients/FirstGradient';
 import SecondGradient from '../Gradients/SecondGradient';
 import * as S from './style';
 
+const capabilities = [
+    { text: 'Use pre-built AI agents' },
+    { text: 'Build your own agents' },
+    { text: 'Order custom-made agents' },
+    { text: 'Connect agents into Automated Workflows' },
+    { text: 'Discuss your challenges with industry experts' },
+    { text: 'Automate processes of any complexity', bold: true },
+];
+
 function FirstSection() {
     const [open, setOpen] = useState(false)
 
@@ -101,8 +110,11 @@ function FirstSection() {
                 <FirstGradient />
                 <SecondGradient />
                 <S.ContentHeader as="h1">
-                    Leading AI for Oil and Gas: Specialized Marketplace of Data-Driven AI Agents for Petroleum Engineers
+                    Oil and Gas Engineering. Accelerated by AI.
                 </S.ContentHeader>
+                <S.ContentSubHeader>
+                    Marketplace of High-Impact AI Agents, Automated Workflows, Intelligent Tools, and Human Expertise – all in one workspace
+                </S.ContentSubHeader>
                 <S.BottomContent>
                     <S.ContentLeft>
                         <S.ContentLogo width="386" height="117" viewBox="0 0 386 117" fill="none" xmlns="http://www.w3.org/2000/svg" fetchpriority="high">
@@ -116,20 +128,21 @@ function FirstSection() {
                                 </linearGradient>
                             </defs>
                         </S.ContentLogo>
-                        <S.Button onClick={() => setOpen(true)}>Join Exclusive Beta</S.Button>
+                        <S.Button onClick={() => setOpen(true)}>Start</S.Button>
                     </S.ContentLeft>
                     <S.ContentRight>
                         <S.ContentRightHeader as="h2">
-                            Transform Your Engineering Workflows with Industry-Specific AI
+                            Transform Your Engineering<br />
+                            Workflows with Industry-Specific AI,<br />
+                            Guided by Real Engineers
                         </S.ContentRightHeader>
-                        <div style={{ width: "100%", display: 'flex', flexDirection: "column", gap: 20 }}>
-                            <S.ContentRightText>
-                                {`The global oil and gas industry loses about $20 bln annually due to inefficiencies and outdated practices. AI can reduce that by 30-40%.`}
-                            </S.ContentRightText>
-                            <S.ContentRightText style={{ fontWeight: 700 }}>
-                                {`Our Solution: Specialized micro-AI agents delivering macro-impact on productivity, accuracy and performance.`}
-                            </S.ContentRightText>
-                        </div>
+                        <S.ContentRightList>
+                            {capabilities.map(({ text, bold }) => (
+                                <S.ContentRightListItem key={text} style={bold ? { fontWeight: 700 } : undefined}>
+                                    {text}
+                                </S.ContentRightListItem>
+                            ))}
+                        </S.ContentRightList>
                         <S.Arrow xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">
                             <path d="M12 8.5L2.17658e-07 5.2958e-07L9.53674e-07 17L12 8.5Z" fill="#31ED37" />
                         </S.Arrow>

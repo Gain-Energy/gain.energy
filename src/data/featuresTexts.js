@@ -21,6 +21,13 @@ import img51 from '../img/features/05/Third-Party AI Agent Listings on the Marke
 import img52 from '../img/features/05/Third-Party AI Agent Listings on the Marketplace_02.png'
 import img53 from '../img/features/05/Third-Party AI Agent Listings on the Marketplace_03.png'
 import img61 from '../img/features/06/Customization and Support.png'
+import img71 from '../img/features/07/Experts Network_01.jpg'
+import img72 from '../img/features/07/Experts Network_02.jpg'
+import img81 from '../img/features/08/AI Workflows_01.jpg'
+import img82 from '../img/features/08/AI Workflows_02.jpg'
+import img83 from '../img/features/08/AI Workflows_03.jpg'
+import img84 from '../img/features/08/AI Workflows_04.jpg'
+import img85 from '../img/features/08/AI Workflows_05.jpg'
 const screenWidth = window.innerWidth
 
 const featuresTexts = [
@@ -59,14 +66,30 @@ const featuresTexts = [
     {
         id: 5,
         top: screenWidth <= 1024 ? '185px' : '415px',
+        header: 'Expert Network',
+        headerPopup: <>Expert Network</>,
+        imageSrc: [img71, img72],
+        text: 'Expert Network connects you directly with experienced industry professionals for focused, one-hour technical consultation sessions. During each session, experts work with your team to understand your operational challenges, discuss engineering use cases, and provide practical technical guidance and industry best practices. As a unique outcome, every consultation also produces a conceptual prototype of a custom AI Agent designed specifically to address your identified pain point. This gives you immediate value in two ways: expert recommendations you can apply today, and a tangible AI solution blueprint you can choose to have Upstrima develop into a production-ready AI Agent—or simply use as a roadmap for future innovation.'
+    },
+    {
+        id: 6,
+        top: screenWidth <= 1024 ? '225px' : '510px',
+        header: 'AI Workflows',
+        headerPopup: <>AI Workflows</>,
+        imageSrc: [img81, img82, img83, img84, img85],
+        text: 'AI Workflows enable engineers to automate complex technical processes by visually connecting AI Agents, specialized tools, and decision logic into intelligent, repeatable workflows. Whether executed with a single click or reviewed step by step, AI Workflows streamline multi-stage engineering tasks while allowing users to inspect, validate, and guide each stage of the process. By combining automation with human oversight, Upstrima helps organizations accelerate execution, standardize best practices, and tackle workflows of virtually any complexity without sacrificing engineering control or confidence.'
+    },
+    {
+        id: 7,
+        top: screenWidth <= 1024 ? '265px' : '600px',
         header: 'Third-Party AI Agent Listings on the Marketplace',
         headerPopup: screenWidth <= 1024 ? <>Third-Party AI Agent <br />Listings on the Marketplace</> : <>Third-Party AI Agent Listings on the Marketplace</>,
         imageSrc: [img51, img52, img53],
         text: "Have you created an impressive application or utility that you wish to share with your colleagues or clients around the globe? We invite third-party developers and engineers from various sectors to showcase your applications on the Upstrima Marketplace. With the support of our AI engine, your applications will excel and deliver significant results for clients, while providing you with consistent revenue and recognition."
     },
     {
-        id: 6,
-        top: screenWidth <= 1024 ? '240px' : '550px',
+        id: 8,
+        top: screenWidth <= 1024 ? '320px' : '740px',
         header: 'Customization and Support',
         headerPopup: screenWidth <= 1024 ? <>Customization <br />and Support</> : <>Customization and Support</>,
         imageSrc: [img61],

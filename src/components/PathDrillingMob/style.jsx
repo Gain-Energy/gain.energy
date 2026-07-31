@@ -30,7 +30,7 @@ export const DrillingFinish = styled.p`
     position: absolute;
     left: 10px;
     top: 5832px;
-    font-family: 'Inter';
+    font-family: var(--us_font-text);
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;

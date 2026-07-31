@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useLenis } from '@studio-freight/react-lenis';
 import { usePopup } from '../contexts/PopupProvider';
 import { useMediaQuery } from "react-responsive";
 import * as S from './style';
+
+const SLIDE_COOLDOWN = 400
 
 const ClipPathSVG = ({ id, pathData }) => (
     <svg width="0" height="0" className="svg">
@@ -18,6 +21,9 @@ function KeyFeaturesPopup({activeFeature}) {
 
     const { popupOpen, togglePopup } = usePopup()
     const [activeImg, setActiveImg] = useState(0)
+    const lenis = useLenis()
+    const textRef = useRef(null)
+    const slideLocked = useRef(false)
 
     const handlePrev = () => {
         if (activeImg > 0) {
@@ -31,6 +37,20 @@ function KeyFeaturesPopup({activeFeature}) {
         }
     }
 
+    const handleWheel = (event) => {
+        if (textRef.current?.contains(event.target)) return
+        if (slideLocked.current || Math.abs(event.deltaY) < 10) return
+
+        slideLocked.current = true
+        setTimeout(() => { slideLocked.current = false }, SLIDE_COOLDOWN)
+
+        if (event.deltaY > 0) {
+            handleNext()
+        } else {
+            handlePrev()
+        }
+    }
+
     const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
     const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
 
@@ -38,28 +58,31 @@ function KeyFeaturesPopup({activeFeature}) {
             if (popupOpen) {
                 document.body.style.overflowY = 'hidden';
                 document.documentElement.style.overflowY = 'hidden';
+                lenis?.stop();
             } else {
                 document.body.style.overflowY = 'auto';
                 document.documentElement.style.overflowY = 'auto';
+                lenis?.start();
             }
             return () => {
                 document.body.style.overflowY = 'auto';
                 document.documentElement.style.overflowY = 'auto';
+                lenis?.start();
             };
-        }, [popupOpen]);
+        }, [popupOpen, lenis]);
 
     return (
         <S.Wrapper>
             <S.CloseButton onClick={togglePopup}>
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Close">
                     <path d="M4.21837 0.723799C3.25336 -0.241266 1.68877 -0.241266 0.723758 0.723799C-0.241253 1.68886 -0.241253 3.25354 0.723758 4.21861L17.5056 21.0014L0.726485 37.7814C-0.238527 38.7465 -0.238525 40.3111 0.726485 41.2762C1.6915 42.2413 3.25609 42.2413 4.2211 41.2762L21.0002 24.4962L37.7789 41.2758C38.7439 42.2409 40.3085 42.2409 41.2735 41.2758C42.2385 40.3108 42.2385 38.7461 41.2735 37.781L24.4948 21.0014L41.2762 4.21898C42.2413 3.25392 42.2413 1.68924 41.2762 0.724172C40.3112 -0.240893 38.7466 -0.240893 37.7816 0.724172L21.0002 17.5066L4.21837 0.723799Z" fill="#070707" />
                 </svg>
             </S.CloseButton>
             <ClipPathSVG id="inner" pathData={isTablet ? pathDataTablet : isMobile ? pathDataMobile : pathDataDesktop} />
             <ClipPathSVG id="outer" pathData={isTablet ? pathDataTablet : isMobile ? pathDataMobile : pathDataDesktop} />
-            <S.Inner>
+            <S.Inner onWheel={handleWheel}>
                 <S.InnerLeft>
-                    <S.Text>{activeFeature.text}</S.Text>
+                    <S.Text ref={textRef}>{activeFeature.text}</S.Text>
                     <S.Navigation>
                         <S.LeftButton onClick={handlePrev}>
                             <svg xmlns="http://www.w3.org/2000/svg" width={isTablet ? "7" : "12"} height={isTablet ? "10" : "17"} viewBox="0 0 12 17" fill="none">

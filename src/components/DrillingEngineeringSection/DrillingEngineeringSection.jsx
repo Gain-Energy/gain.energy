@@ -188,7 +188,7 @@ function DrillingEngineeringSection() {
                     {/* <S.PathEnd ref={finishRef}>AND SO ON…</S.PathEnd> */}
                 </S.PathBlock>
                 <S.Text ref={textRef}>
-                    The Marketplace is regularly refreshed with new AI Agents that cover various Energy sectors, functions, and goals—ranging from basic calculations to complex workflows.
+                    The Marketplace is regularly refreshed with new AI Agents that cover various Energy sectors, functions, and goals, ranging from basic calculations to complex workflows.
                 </S.Text>
             </S.Content>
         </S.DrillingEngineeringSection>

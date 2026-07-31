@@ -53,7 +53,7 @@ export const PartnersBlock = styled.div`
 
 export const PartnersHeadline = styled.h2`
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -118,7 +118,7 @@ export const LeftSide = styled.div`
 
 export const NewsHeadline = styled.h2`
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -392,7 +392,7 @@ export const NewsItemImg = styled.img`
 
 export const NewsItemHeadline = styled.h3`
     color: var(--us_fill-green);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 28px;
     font-style: normal;
     font-weight: 300;
@@ -410,7 +410,7 @@ export const NewsItemHeadline = styled.h3`
 
 export const NewsItemDate = styled.time`
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -426,7 +426,7 @@ export const NewsItemDate = styled.time`
 export const NewsItemText = styled.p`
     color: ${({ isActive }) => 
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

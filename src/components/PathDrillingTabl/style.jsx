@@ -58,8 +58,8 @@ export const PathDrilling = styled.svg`
 export const DrillingFinish = styled.p`
     position: absolute;
     left: 279px;
-    top: 4820px;
-    font-family: 'Inter';
+    top: 4896px;
+    font-family: var(--us_font-text);
     font-weight: 400;
     font-size: 14px;
     line-height: 120%;
