@@ -1,14 +1,15 @@
 import img11 from "../img/features/01/AI Agent Marketplace_01.png";
 import img12 from "../img/features/01/AI Agent Marketplace_02.png";
 import img13 from "../img/features/01/AI Agent Marketplace_03.png";
-import img21 from "../img/features/02/Static and Live AI Agents_01.png";
-import img22 from "../img/features/02/Static and Live AI Agents_02.png";
-import img23 from "../img/features/02/Static and Live AI Agents_03.png";
-import img24 from "../img/features/02/Static and Live AI Agents_04.png";
+import img21 from "../img/features/02/High Impact AI Agents_01.png";
+import img22 from "../img/features/02/High Impact AI Agents_02.png";
+import img23 from "../img/features/02/High Impact AI Agents_03.png";
 import img31 from "../img/features/03/Data Sources and Processing_01.png";
 import img32 from "../img/features/03/Data Sources and Processing_02.png";
 import img41 from "../img/features/04/Specialized AI Assistant_01.png";
 import img42 from "../img/features/04/Specialized AI Assistant_02.png";
+import img43 from "../img/features/04/Specialized AI Assistant_03.png";
+import img44 from "../img/features/04/Specialized AI Assistant_04.png";
 import img51 from "../img/features/05/3rd Party AI Apps Listings on the Marketplace_01.png";
 import img52 from "../img/features/05/3rd Party AI Apps Listings on the Marketplace_02.png";
 import img53 from "../img/features/05/3rd Party AI Apps Listings on the Marketplace_03.png";
@@ -53,7 +54,7 @@ const featuresTexts = [
       ) : (
         <>High Impact AI Agents</>
       ),
-    imageSrc: [img21, img22, img23, img24],
+    imageSrc: [img21, img22, img23],
     text: "The Marketplace comes pre-loaded with impactful AI agents, both static and live. Static agents are great for offset analysis, well planning, reporting and so on. However, Live AI Agents can connect to any WITSML and perform critical tasks in real-time, such as data QA/QC, drilling risks forecasting, predictive maintenance, geosteering, visualizations and much more.",
   },
   {
@@ -85,7 +86,7 @@ const featuresTexts = [
       ) : (
         <>Specialized AI Assistant</>
       ),
-    imageSrc: [img41, img42],
+    imageSrc: [img41, img42, img43, img44],
     text: "Our AI Assistant is pre-trained on a verified Upstrima Knowledge Base, assembled by our engineers and partners. This approach ensures consistent and repeatable answers with high precision and low level of hallucinations. General queries, engineering calculations, or extracting insights from your historical or real-time well data – it’s all here.",
   },
   {
