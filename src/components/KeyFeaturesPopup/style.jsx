@@ -23,13 +23,31 @@ export const CloseButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 76px;
-    height: 76px;
-    top: 0px;
-    right: 0px;
+    width: 40px;
+    height: 40px;
+    top: 24px;
+    right: 24px;
+    border-radius: 8px;
     background: linear-gradient(to right, #1BD2A3 0%, #39FF3F 100%);
     border: none;
-    z-index: 999;
+    z-index: 1001;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    @media (max-width: 480px) {
+        width: 32px;
+        height: 32px;
+        top: 16px;
+        right: 16px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
 `
 
 export const ZoneBase = styled.div`
@@ -98,11 +116,24 @@ export const InnerRight = styled.div`
 `
 
 export const Text = styled.p`
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: var(--us_fill-white);
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--us_fill-green) transparent;
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--us_fill-green);
+    }
 
     @media (max-width: 1024px) {
         font-weight: 400;
@@ -126,17 +157,18 @@ export const LeftButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 128px;
-    height: 44px;
+    width: 72px;
+    height: 36px;
     border: none;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
     background-color: #00AAFF; 
     transition: background-color 0.3s ease;
 
     @media (max-width: 1024px) {
-        width: 128px;
-        height: 44px;
+        width: 64px;
+        height: 32px;
 
         svg {
             width: 12px;
@@ -183,17 +215,18 @@ export const RightButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 128px;
-    height: 44px;
+    width: 72px;
+    height: 36px;
     border: none;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
     background-color: #00AAFF; 
     transition: background-color 0.3s ease;
 
     @media (max-width: 1024px) {
-        width: 128px;
-        height: 44px;
+        width: 64px;
+        height: 32px;
 
         svg {
             width: 12px;
@@ -236,7 +269,7 @@ export const RightButton = styled.button`
 `;
 
 export const Heading = styled.h4`
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-weight: 300;
     font-size: 36px;
     line-height: 120%;
@@ -258,27 +291,25 @@ export const Heading = styled.h4`
 
 export const ImageWrapper = styled.div`
     width: 780px;
-    height: 439px;
+    aspect-ratio: 2.1;
+    border-radius: 8px;
+    overflow: hidden;
 
     @media (max-width: 1024px) {
         width: 440px;
-        height: 248px;
+        margin-top: 10px;
     }
 
     @media (max-width: 480px) {
         width: 300px;
-        height: 169px;
     }
 `
 
 export const Image = styled.img`
+    display: block;
     width: 100%;
-    height: auto;
-    margin-top: 2px;
-
-    @media (max-width: 1024px) {
-        margin-top: 10px;
-    }
+    height: 100%;
+    object-fit: cover;
 `
 
 export const ImagePreviewBlock = styled.div`
@@ -300,15 +331,17 @@ export const ImagePreviewBlock = styled.div`
 
 export const ImagePreview = styled.img`
     cursor: pointer;
+    flex: none;
     width: 77px;
-    height: 44px;
+    aspect-ratio: 2.1;
+    border-radius: 4px;
+    object-fit: cover;
     opacity: ${({ isActive }) => 
         (isActive ? '1' : '0.3')}
     ;
 
     @media (max-width: 1024px) {
         width: 53px;
-        height: 30px;
     }
 `
 

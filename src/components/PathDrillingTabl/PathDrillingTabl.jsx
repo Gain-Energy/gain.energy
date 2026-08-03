@@ -103,8 +103,8 @@ function PathDrillingTabl() {
             </S.Union>
             <S.PathDrilling 
                 width="2" 
-                height="4380"
-                viewBox="0 0 2 4380" 
+                height="4456"
+                viewBox="0 0 2 4456" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
             >

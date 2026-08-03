@@ -6,13 +6,12 @@ import Consolas from '../fonts/consola.ttf'
 const GlobalStyles = () => (
     <Global
         styles={css`
-            @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@100..800&display=swap');
-            
             @font-face {
                 font-family: 'PP Nikkei Pacific';
                 src: url(${PPNikkei300}) format('opentype');
                 font-weight: 300;
                 font-style: normal;
+                font-display: swap;
             }
 
             @font-face {
@@ -20,6 +19,7 @@ const GlobalStyles = () => (
                 src: url(${PPNikkei400}) format('opentype');
                 font-weight: 400;
                 font-style: normal;
+                font-display: swap;
             }
 
             @font-face {
@@ -27,9 +27,12 @@ const GlobalStyles = () => (
                 src: url(${Consolas}) format('truetype');
                 font-weight: 400;
                 font-style: normal;
+                font-display: swap;
             }
 
             :root {
+                --us_font-text: 'JetBrains Mono', 'Consolas', ui-monospace, monospace;
+                --us_font-display: 'PP Nikkei Pacific', 'Arial Narrow', sans-serif;
                 --us_fill-green: #31ED37;
                 --us_fill-white: #F9F6EF;
                 --us_fill-dark_grey: #292929;
@@ -44,7 +47,7 @@ const GlobalStyles = () => (
             }
 
             html, body {
-                font-family: 'PP Nikkei Pacific', 'Consolas', 'JetBrains Mono', 'Inter', sans-serif;
+                font-family: var(--us_font-display);
                 overflow-x: hidden;
             }
         `}

@@ -1,12 +1,14 @@
 import styled from '@emotion/styled';
 
 export const Header = styled.header`
-    position: absolute;
+    position: fixed;
     top: 24px;
     left: 0;
     right: 0;
     z-index: 99;
     background: transparent;
+    transform: translateY(${({ isHidden }) => (isHidden ? '-200%' : '0')});
+    transition: transform .4s ease;
 
     @media (max-width: 1024px) {
         top: 10px;
@@ -52,7 +54,7 @@ export const MenuButton = styled.button`
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
-    font-family: 'PP Nikkei Pacific';
+    font-family: var(--us_font-display);
     background: transparent;
     border: none;
     font-size: 24px;

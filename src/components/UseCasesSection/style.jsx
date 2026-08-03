@@ -64,7 +64,7 @@ export const LogoHeadline = styled.div`
 export const Headline = styled.div`
     width: 354px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -109,7 +109,7 @@ export const Logo = styled.svg`
 export const Text = styled.p`
     width: 514px;
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -203,7 +203,7 @@ export const Case = styled.div`
         (isActive ? 'var(--us_fill-white)' : 'var(--us_fill-grey)')};
     text-align: ${({ position }) =>
         position === 'left' ? 'right' : 'left'};
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 36px;
     font-style: normal;
     font-weight: 300;
@@ -420,7 +420,7 @@ export const UpperText = styled.span`
     padding-top: 40px;
     color: var(--us_fill-bg);
     text-align: center;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -448,7 +448,7 @@ export const LowerText = styled.span`
     width: 146px;
     color: var(--us_fill-bg);
     text-align: center;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 30.202px;
     font-style: normal;
     font-weight: 400;

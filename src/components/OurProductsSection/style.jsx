@@ -38,7 +38,7 @@ export const Top = styled.div`
 
 export const Headline = styled.h2`
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -114,7 +114,7 @@ export const ContentHeadline = styled.h3`
     color: var(--us_fill-white);
     opacity: ${({ isActive }) => 
         (isActive ? '1' : '0.3')};
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 22px;
     font-style: normal;
     font-weight: 300;
@@ -205,7 +205,7 @@ export const PerfectFor = styled.div`
 
 export const AdvantagesTitle = styled.h4`
     color: var(--us_fill-green);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 28px;
     font-style: normal;
     font-weight: 300;
@@ -221,7 +221,7 @@ export const AdvantagesTitle = styled.h4`
 
 export const AdvantagesList = styled.ul`
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -246,7 +246,7 @@ export const AdvantagesDescription = styled.p`
     width: 558px;
     padding: 15px 40px;
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 20px;
     font-style: normal;
     font-weight: 400;

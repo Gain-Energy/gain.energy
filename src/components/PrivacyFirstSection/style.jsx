@@ -101,7 +101,7 @@ export const ContentHeader = styled.h1`
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -157,7 +157,7 @@ export const ContentRight = styled.div`
 export const ContentRightHeader = styled.h3`
     width: 534px;
     color: var(--us_fill-white);
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -178,7 +178,7 @@ export const ContentRightText = styled.p`
     color: var(--us_fill-white);
     leading-trim: both;
     text-edge: cap;
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -277,7 +277,7 @@ export const StartDrillingsInscription = styled.p`
     width: 74px;
     color: var(--us_fill-white);
     text-align: right;
-    font-family: "JetBrains Mono";
+    font-family: var(--us_font-text);
     font-size: 13px;
     font-style: normal;
     font-weight: 400;

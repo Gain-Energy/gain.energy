@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const MenuWrapper = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     display: flex;
@@ -45,7 +45,7 @@ export const MenuText = styled.p`
 
     @media (max-width: 1024px) {
         display: block;
-        font-family: 'PP Nikkei Pacific';
+        font-family: var(--us_font-display);
         font-weight: 400;
         font-size: 12px;
         line-height: 130%;
@@ -55,7 +55,7 @@ export const MenuText = styled.p`
 
     @media (max-width: 480px) {
         display: block;
-        font-family: 'PP Nikkei Pacific';
+        font-family: var(--us_font-display);
         font-weight: 400;
         font-size: 12px;
         line-height: 130%;
@@ -101,7 +101,7 @@ export const ItemsBlock = styled.div`
 export const MenuItem = styled.a`
     text-decoration: none;
     cursor: pointer;
-    font-family: 'JetBrains Mono';
+    font-family: var(--us_font-text);
     font-weight: 400;
     font-size: 15px;
     line-height: 130%;

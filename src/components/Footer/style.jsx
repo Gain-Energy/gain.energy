@@ -53,7 +53,7 @@ export const ContactUsHeadline = styled.h2`
     width: 301px;
     padding-top: 11px;   
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 58px;
     font-style: normal;
     font-weight: 300;
@@ -73,7 +73,7 @@ export const ContactUsSubline = styled.h2`
     width: 301px;
     padding-top: 11px;   
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -139,7 +139,7 @@ export const NavigationHeadline = styled.p`
     padding-top: 40px;
     padding-left: 138px;
     color: var(--us_fill-white);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -172,7 +172,7 @@ export const NavigationLink = styled.a`
     cursor: pointer;
     text-wrap: nowrap;
     color: var(--us_fill-white, #F9F6EF);
-    font-family: "PP Nikkei Pacific";
+    font-family: var(--us_font-display);
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -271,7 +271,7 @@ export const Copyright = styled.p`
     width: 308px;
     padding-top: 220px;
     color: var(--us_fill-bg);
-    font-family: Inter;
+    font-family: var(--us_font-text);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
