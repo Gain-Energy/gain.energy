@@ -319,6 +319,7 @@ export const PerspectivesBlock = styled.div`
     grid-template-columns: repeat(2, 1fr);
     column-gap: 15px;
     row-gap: 30px;
+    max-width: unset;
   }
 `;
 
