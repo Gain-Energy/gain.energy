@@ -52,6 +52,7 @@ function Footer({ name, type }) {
                         <S.NavigationLink href="/company" onClick={(e) => !type && handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.NavigationLink>
                         <S.NavigationLink href="/partners" onClick={(e) => !type && handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.NavigationLink>
                         <S.NavigationLink href="/news" onClick={(e) => !type && handleClick(e, 'News')} aria-label="Go to News section">News</S.NavigationLink>
+                        <S.NavigationLink href="/gain-energy-launches-upstrima" aria-label="Go to PR page">PR</S.NavigationLink>
                         <S.NavigationLink href="/privacy" aria-label="View Privacy Policy">Privacy and Policy</S.NavigationLink>
                     </S.NavigationList>
                 </S.NavigationBlock>

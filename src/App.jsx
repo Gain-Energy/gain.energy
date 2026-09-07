@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/home';
 import PrivacyPage from './pages/privacy';
+import PressPage from './pages/press';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/partners" element={<HomePage section="Partners" />} />
         <Route path="/news" element={<HomePage section="News" />} />
         <Route path="/contacts" element={<HomePage section="Contacts" />} />
+        <Route path="/gain-energy-launches-upstrima" element={<PressPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>
     </Router>

@@ -99,6 +99,14 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- PR / Press Release Page -->
+  <url>
+    <loc>https://gain.energy/gain-energy-launches-upstrima</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Privacy Policy Page -->
   <url>
     <loc>https://gain.energy/privacy</loc>
