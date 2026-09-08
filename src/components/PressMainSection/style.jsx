@@ -23,27 +23,10 @@ export const Provider = styled.div`
   }
 `
 
-export const Headline = styled.h1`
-  font-family: var(--us_font-display);
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 95%;
-  text-transform: uppercase;
-  color: var(--us_fill-white);
-
-  @media (max-width: 1024px) {
-    font-size: 30px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 26px;
-  }
-`
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding: 30px;
@@ -53,6 +36,51 @@ export const Container = styled.div`
   @media (max-width: 1024px) {
     max-width: 600px;
     padding: 20px;
+  }
+`
+
+export const Eyebrow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--us_font-text);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--us_fill-light_grey);
+
+  @media (max-width: 1024px) {
+    font-size: 11px;
+    gap: 8px;
+  }
+`
+
+export const EyebrowMark = styled.span`
+  width: 32px;
+  height: 2px;
+  background: var(--us_fill-grad);
+
+  @media (max-width: 1024px) {
+    width: 20px;
+  }
+`
+
+export const Headline = styled.h1`
+  font-family: var(--us_font-display);
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 95%;
+  text-transform: uppercase;
+  color: var(--us_fill-white);
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 26px;
   }
 `
 
@@ -72,8 +100,9 @@ export const HighlightsTitle = styled.div`
   font-size: 13px;
   font-weight: 400;
   line-height: 130%;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--us_fill-white);
+  color: var(--us_fill-light_grey);
   padding-bottom: 12px;
 
   @media (max-width: 1024px) {
@@ -87,28 +116,36 @@ export const Ul = styled.ul`
 `
 
 export const Li = styled.li`
-  font-weight: 200;
-  font-size: 24px;
-  padding-top: 3px;
+  font-family: var(--us_font-display);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 130%;
+  padding-top: 6px;
+  color: var(--us_fill-white);
 
   strong {
-    font-weight: 500;
+    font-weight: 400;
+    color: var(--us_fill-green);
   }
 
   a {
-    color: var(--us_fill-white);
+    color: var(--us_fill-green);
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    font-size: 17px;
   }
 `
 
 export const Header = styled.h2`
   font-family: var(--us_font-display);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 36px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: var(--us_fill-white);
 
   @media (max-width: 1024px) {
     font-size: 26px;
@@ -116,21 +153,25 @@ export const Header = styled.h2`
 `
 
 export const Content = styled.p`
-  font-weight: 200;
+  font-family: var(--us_font-display);
+  font-weight: 300;
   font-size: 24px;
+  line-height: 130%;
+  color: var(--us_fill-white);
 
   strong {
-    font-weight: 500;
+    font-weight: 400;
   }
 
   a {
-    color: var(--us_fill-white);
+    color: var(--us_fill-green);
     text-decoration: underline;
+    text-underline-offset: 3px;
     transition: color 0.3s ease;
   }
 
   a:hover {
-    color: var(--us_fill-green);
+    color: var(--us_fill-white);
   }
 
   @media (max-width: 1024px) {
@@ -148,8 +189,10 @@ export const Signature = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  font-family: var(--us_font-display);
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 300;
+  line-height: 130%;
 
   @media (max-width: 1024px) {
     font-size: 18px;
@@ -157,7 +200,7 @@ export const Signature = styled.div`
 `
 
 export const SignatureName = styled.span`
-  font-weight: 500;
+  font-weight: 400;
 `
 
 export const SignatureTitle = styled.span`
@@ -178,8 +221,10 @@ export const Quote = styled.blockquote`
 `
 
 export const QuoteText = styled.p`
+  font-family: var(--us_font-display);
   font-weight: 300;
   font-size: 28px;
+  line-height: 125%;
   font-style: italic;
 
   @media (max-width: 1024px) {
@@ -206,17 +251,34 @@ export const QuoteAuthorTitle = styled.span`
 export const SHeader = styled.h3`
   padding-top: 12px;
   font-family: var(--us_font-display);
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: var(--us_fill-white);
+
+  @media (max-width: 1024px) {
+    font-size: 22px;
+  }
+`
+
+export const Divider = styled.hr`
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  flex-shrink: 0;
+  border: 0;
+  background: rgba(249, 246, 239, 0.12);
 `
 
 export const Link = styled.a`
-  color: var(--us_fill-white);
+  color: var(--us_fill-green);
   text-decoration: underline;
+  text-underline-offset: 3px;
   transition: color 0.3s ease;
 
   :hover {
-    color: var(--us_fill-green);
+    color: var(--us_fill-white);
   }
 `
 
@@ -233,6 +295,7 @@ export const ShareLabel = styled.span`
   font-size: 13px;
   font-weight: 400;
   line-height: 130%;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--us_fill-light_grey);
 
@@ -267,7 +330,6 @@ export const Banner = styled.img`
   height: auto;
   border: 1px solid rgba(249, 246, 239, 0.12);
 `
-
 
 export const CtaBlock = styled.div`
   display: flex;

@@ -10,6 +10,14 @@ function PressMainSection({ release }) {
 		<S.Provider>
 			{release.headline && (
 				<S.Container>
+					{(release.eyebrow || release.date) && (
+						<S.Eyebrow>
+							<S.EyebrowMark aria-hidden="true" />
+							{release.eyebrow && <span>{release.eyebrow}</span>}
+							{release.eyebrow && release.date && <span aria-hidden="true">{'\u00B7'}</span>}
+							{release.date && <time dateTime={release.dateISO}>{release.date}</time>}
+						</S.Eyebrow>
+					)}
 					<S.Headline>{release.headline}</S.Headline>
 				</S.Container>
 			)}
@@ -51,6 +59,7 @@ function PressMainSection({ release }) {
 
 			{about.length > 0 && (
 				<S.Container>
+					<S.Divider />
 					{about.map((block, i) => (
 						<S.AboutBlock key={i}>
 							<S.SHeader>{block.title}</S.SHeader>
