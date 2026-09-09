@@ -56,7 +56,7 @@ function Menu() {
                     <S.MenuItem href="/company" onClick={(e) => handleClick(e, 'Company')} aria-label="Go to Company section">Company</S.MenuItem>
                     <S.MenuItem href="/partners" onClick={(e) => handleClick(e, 'Partners')} aria-label="Go to Partners section">Partners</S.MenuItem>
                     <S.MenuItem href="/news" onClick={(e) => handleClick(e, 'News')} aria-label="Go to News section">News</S.MenuItem>
-                    <S.MenuItem href="/gain-energy-launches-upstrima" onClick={(e) => handleClick(e, 'gain-energy-launches-upstrima')} aria-label="Go to PR page">PR</S.MenuItem>
+                    <S.MenuItem href="/gain-energy-launches-upstrima" onClick={(e) => handleClick(e, 'gain-energy-launches-upstrima')} aria-label="Go to Press Release page">Press Release</S.MenuItem>
                     <S.MenuItem href="/contacts" onClick={(e) => handleClick(e, 'Contacts')} aria-label="Go to Contacts section">Contacts</S.MenuItem>
                 </S.ItemsBlock>
             </S.MenuContainer>

@@ -8,6 +8,12 @@ function PressMainSection({ release }) {
 
 	return (
 		<S.Provider>
+			{release.bannerImage && (
+				<S.Container>
+					<S.Banner src={release.bannerImage} alt={release.bannerAlt || ''} />
+				</S.Container>
+			)}
+
 			{release.headline && (
 				<S.Container>
 					{(release.eyebrow || release.date) && (
@@ -19,12 +25,6 @@ function PressMainSection({ release }) {
 						</S.Eyebrow>
 					)}
 					<S.Headline>{release.headline}</S.Headline>
-				</S.Container>
-			)}
-
-			{release.bannerImage && (
-				<S.Container>
-					<S.Banner src={release.bannerImage} alt={release.bannerAlt || ''} />
 				</S.Container>
 			)}
 

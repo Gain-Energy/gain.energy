@@ -9,9 +9,31 @@ export const Provider = styled.div`
   flex-direction: column;
   color: var(--us_fill-white);
   gap: 8px;
-  /* Clears the fixed Header, which this page no longer has a hero to sit over. */
   padding-top: 110px;
   padding-bottom: 40px;
+  isolation: isolate;
+  overflow: hidden;
+
+  ::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(90% 40% at 8% 22%, rgba(0, 170, 255, 0.16) 0%, rgba(0, 170, 255, 0) 62%),
+      radial-gradient(85% 38% at 95% 52%, rgba(29, 213, 159, 0.13) 0%, rgba(29, 213, 159, 0) 62%),
+      radial-gradient(85% 35% at 15% 80%, rgba(57, 255, 63, 0.09) 0%, rgba(57, 255, 63, 0) 62%),
+      linear-gradient(
+        180deg,
+        #000 0%,
+        #05090b 12%,
+        #0a1013 42%,
+        #080d0e 68%,
+        #030405 88%,
+        #000 100%
+      );
+  }
 
   @media (max-width: 1024px) {
     gap: 16px;
@@ -116,15 +138,15 @@ export const Ul = styled.ul`
 `
 
 export const Li = styled.li`
-  font-family: var(--us_font-display);
+  font-family: var(--us_font-text);
   font-weight: 300;
-  font-size: 22px;
-  line-height: 130%;
+  font-size: 16px;
+  line-height: 165%;
   padding-top: 6px;
   color: var(--us_fill-white);
 
   strong {
-    font-weight: 400;
+    font-weight: 500;
     color: var(--us_fill-green);
   }
 
@@ -135,7 +157,7 @@ export const Li = styled.li`
   }
 
   @media (max-width: 1024px) {
-    font-size: 17px;
+    font-size: 13px;
   }
 `
 
@@ -153,14 +175,15 @@ export const Header = styled.h2`
 `
 
 export const Content = styled.p`
-  font-family: var(--us_font-display);
+  font-family: var(--us_font-text);
   font-weight: 300;
-  font-size: 24px;
-  line-height: 130%;
+  font-size: 17px;
+  line-height: 170%;
+  letter-spacing: -0.1px;
   color: var(--us_fill-white);
 
   strong {
-    font-weight: 400;
+    font-weight: 500;
   }
 
   a {
@@ -175,7 +198,8 @@ export const Content = styled.p`
   }
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 175%;
   }
 `
 
@@ -189,18 +213,18 @@ export const Signature = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-family: var(--us_font-display);
-  font-size: 24px;
+  font-family: var(--us_font-text);
+  font-size: 16px;
   font-weight: 300;
-  line-height: 130%;
+  line-height: 165%;
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    font-size: 13px;
   }
 `
 
 export const SignatureName = styled.span`
-  font-weight: 400;
+  font-weight: 500;
 `
 
 export const SignatureTitle = styled.span`
@@ -221,14 +245,14 @@ export const Quote = styled.blockquote`
 `
 
 export const QuoteText = styled.p`
-  font-family: var(--us_font-display);
+  font-family: var(--us_font-text);
   font-weight: 300;
-  font-size: 28px;
-  line-height: 125%;
+  font-size: 19px;
+  line-height: 160%;
   font-style: italic;
 
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 15px;
   }
 `
 
