@@ -31,7 +31,7 @@ const pressRelease = {
     label: "Contact",
     name: "Vlad Payrazyan",
     title: "CEO, Gain.Energy",
-    email: "karen@gain.energy",
+    email: "upstrima@gain.energy",
   },
 };
 

@@ -12,7 +12,6 @@
 /build
 
 # editors
-.vscode/
 
 # misc
 .DS_Store
